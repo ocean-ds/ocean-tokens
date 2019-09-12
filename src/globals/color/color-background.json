@@ -1,0 +1,25 @@
+{
+  "color": {
+    "background": {
+      "base": { "value": "{color.base.blue.dark.value}", "type": "color" },
+      "button": {
+        "primary": {
+          "base": {
+            "value": "{color.base.cyan.normal.value}",
+            "type": "color"
+          },
+          "active": {
+            "value": "{color.base.cyan.medium.value}",
+            "type": "color"
+          }
+        },
+        "secondary": {
+          "base": {
+            "value": "{color.base.white.value}",
+            "type": "color"
+          }
+        }
+      }
+    }
+  }
+}

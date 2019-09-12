@@ -1,0 +1,10 @@
+{
+  "font": {
+    "platform": {
+      "system": {
+        "value": "myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif",
+        "type": "typography"
+      }
+    }
+  }
+}

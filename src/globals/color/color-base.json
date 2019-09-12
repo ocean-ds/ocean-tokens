@@ -1,0 +1,24 @@
+{
+  "color": {
+    "base": {
+      "white": { "value": "#ffffff", "type": "color" },
+      "blue": {
+        "dark": { "value": "#2C3645", "type": "color" }
+      },
+      "cyan": {
+        "normal": {
+          "value": "#33c4d6",
+          "type": "color",
+          "comment": "look how this comment will appear in the generated files"
+        },
+        "medium": {
+          "value": "#3eb0be",
+          "type": "color"
+        }
+      },
+      "gray": {
+        "dark": { "value": "#343e4f", "type": "color" }
+      }
+    }
+  }
+}

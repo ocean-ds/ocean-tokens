@@ -1,0 +1,7 @@
+{
+  "font": {
+    "family": {
+      "base": { "value": "{font.platform.system.value}", "type": "typography" }
+    }
+  }
+}
