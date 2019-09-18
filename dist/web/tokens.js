@@ -1,19 +1,10 @@
-/**
- * Do not edit directly
- * Generated on Thu, 12 Sep 2019 12:48:31 GMT
- */
-
-export const TOKEN_COLOR_BACKGROUND_BASE = "#2c3645";
-export const TOKEN_COLOR_BACKGROUND_BUTTON_PRIMARY_BASE = "#33c4d6";
-export const TOKEN_COLOR_BACKGROUND_BUTTON_PRIMARY_ACTIVE = "#3eb0be";
-export const TOKEN_COLOR_BACKGROUND_BUTTON_SECONDARY_BASE = "#ffffff";
 export const TOKEN_COLOR_BASE_WHITE = "#ffffff";
+export const TOKEN_COLOR_BASE_BLACK_NORMAL = "#000000";
+export const TOKEN_COLOR_BASE_BLUE_MEDIUM = "#899bbe";
 export const TOKEN_COLOR_BASE_BLUE_DARK = "#2c3645";
-export const TOKEN_COLOR_BASE_CYAN_NORMAL = "#33c4d6"; // look how this comment will appear in the generated files
-export const TOKEN_COLOR_BASE_CYAN_MEDIUM = "#3eb0be";
-export const TOKEN_COLOR_BASE_GRAY_DARK = "#343e4f";
-export const TOKEN_COLOR_FONT_BUTTON_PRIMARY_BASE = "#ffffff";
-export const TOKEN_COLOR_FONT_BUTTON_SECONDARY_BASE = "#343e4f";
-export const TOKEN_COLOR_FONT_BUTTON_SECONDARY_ACTIVE = "#33c4d6";
-export const TOKEN_FONT_FAMILY_BASE = "myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif";
-export const TOKEN_FONT_PLATFORM_SYSTEM = "myriad-pro, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif";
+export const TOKEN_COLOR_BASE_CYAN_NORMAL = "#00d5f2";
+export const TOKEN_COLOR_BASE_GRAY_NORMAL = "#5a5a5a";
+export const TOKEN_COLOR_BASE_GRAY_LIGHT = "#efeff4";
+export const TOKEN_COLOR_BASE_RED_NORMAL = "#ec696d";
+export const TOKEN_COLOR_BASE_ORANGE_MEDIUM = "#ff9057";
+export const TOKEN_COLOR_BASE_GREEN_NORMAL = "#00d288";
