@@ -1,21 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!--
-  Do not edit directly
-  Generated on Thu, 12 Sep 2019 12:48:31 GMT
--->
+
 <resources>
-  <color name="TOKEN_COLOR_BACKGROUND_BASE">#ff2c3645</color>
-  <color name="TOKEN_COLOR_BACKGROUND_BUTTON_PRIMARY_BASE">#ff33c4d6</color>
-  <color name="TOKEN_COLOR_BACKGROUND_BUTTON_PRIMARY_ACTIVE">#ff3eb0be</color>
-  <color name="TOKEN_COLOR_BACKGROUND_BUTTON_SECONDARY_BASE">#ffffffff</color>
   <color name="TOKEN_COLOR_BASE_WHITE">#ffffffff</color>
+  <color name="TOKEN_COLOR_BASE_BLACK_NORMAL">#ff000000</color>
+  <color name="TOKEN_COLOR_BASE_BLUE_MEDIUM">#ff899bbe</color>
   <color name="TOKEN_COLOR_BASE_BLUE_DARK">#ff2c3645</color>
-  <color name="TOKEN_COLOR_BASE_CYAN_NORMAL">#ff33c4d6</color><!-- look how this comment will appear in the generated files -->
-  <color name="TOKEN_COLOR_BASE_CYAN_MEDIUM">#ff3eb0be</color>
-  <color name="TOKEN_COLOR_BASE_GRAY_DARK">#ff343e4f</color>
-  <color name="TOKEN_COLOR_FONT_BUTTON_PRIMARY_BASE">#ffffffff</color>
-  <color name="TOKEN_COLOR_FONT_BUTTON_SECONDARY_BASE">#ff343e4f</color>
-  <color name="TOKEN_COLOR_FONT_BUTTON_SECONDARY_ACTIVE">#ff33c4d6</color>
+  <color name="TOKEN_COLOR_BASE_CYAN_NORMAL">#ff00d5f2</color>
+  <color name="TOKEN_COLOR_BASE_GRAY_NORMAL">#ff5a5a5a</color>
+  <color name="TOKEN_COLOR_BASE_GRAY_LIGHT">#ffefeff4</color>
+  <color name="TOKEN_COLOR_BASE_RED_NORMAL">#ffec696d</color>
+  <color name="TOKEN_COLOR_BASE_ORANGE_MEDIUM">#ffff9057</color>
+  <color name="TOKEN_COLOR_BASE_GREEN_NORMAL">#ff00d288</color>
   
 </resources>
