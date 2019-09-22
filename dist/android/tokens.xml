@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+	<color name="TOKEN_COLOR_BASE_WHITE">#ffffffff</color>
+	<color name="TOKEN_COLOR_BASE_BLACK_NORMAL">#ff000000</color>
+	<color name="TOKEN_COLOR_BASE_BLUE_MEDIUM">#ff899bbe</color>
+	<color name="TOKEN_COLOR_BASE_BLUE_DARK">#ff2c3645</color>
+	<color name="TOKEN_COLOR_BASE_CYAN_NORMAL">#ff00d5f2</color>
+	<color name="TOKEN_COLOR_BASE_GRAY_NORMAL">#ff5a5a5a</color>
+	<color name="TOKEN_COLOR_BASE_GRAY_LIGHT">#ffefeff4</color>
+	<color name="TOKEN_COLOR_BASE_RED_NORMAL">#ffec696d</color>
+	<color name="TOKEN_COLOR_BASE_ORANGE_MEDIUM">#ffff9057</color>
+	<color name="TOKEN_COLOR_BASE_GREEN_NORMAL">#ff00d288</color>
+	<item name="TOKEN_FONT_FAMILY_BASE">Roboto</item>
+</resources>

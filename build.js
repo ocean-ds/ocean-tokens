@@ -1,4 +1,13 @@
 const StyleDictionaryPackage = require('style-dictionary');
+const fs = require('fs');
+const _ = require('lodash');
+
+StyleDictionaryPackage.registerFormat({
+  name: 'android/xml',
+  formatter: _.template(
+    fs.readFileSync(__dirname + '/templates/android-xml.template')
+  )
+});
 
 function getStyleDictionaryConfig(platform) {
   return {
@@ -52,8 +61,8 @@ function getStyleDictionaryConfig(platform) {
         buildPath: 'dist/android/',
         files: [
           {
-            destination: 'tokens.colors.xml',
-            format: 'android/colors',
+            destination: 'tokens.xml',
+            format: 'android/xml',
             options: { showFileHeader: false }
           }
         ]
