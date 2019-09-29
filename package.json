@@ -39,5 +39,8 @@
     "pretty-quick": "^1.11.1",
     "rimraf": "^3.0.0",
     "style-dictionary": "2.8.2"
+  },
+  "engines": {
+    "node": ">=8.0.0"
   }
 }
