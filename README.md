@@ -25,7 +25,7 @@ import { TOKEN_COLOR_BASE_WHITE, TOKEN_FONT_FAMILY_BASE } from 'utils/tokens';
 const GlobalStyle = createGlobalStyle`
   body {
     font-family: ${TOKEN_FONT_FAMILY_BASE};
-    background-color: ${TOKEN_COLOR_BACKGROUND_BASE};
+    background-color: ${TOKEN_COLOR_BASE_WHITE};
   }
 `;
 ```
@@ -37,7 +37,7 @@ const GlobalStyle = createGlobalStyle`
 
 body {
   font-family: $TOKEN_FONT_FAMILY_BASE;
-  background-color: $TOKEN_COLOR_BACKGROUND_BASE;
+  background-color: $TOKEN_COLOR_BASE_WHITE;
 }
 ```
 
