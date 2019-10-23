@@ -14,97 +14,77 @@ function getStyleDictionaryConfig(platform) {
     source: ['src/globals/**/*.json', `src/platforms/${platform}/*.json`],
     platforms: {
       js: {
-        transforms: [
-          'attribute/cti',
-          'name/cti/constant',
-          'size/rem',
-          'color/hex'
-        ],
+        transformGroup: 'js',
         buildPath: `dist/${platform}/`,
-        prefix: 'token',
         files: [
           {
             destination: 'tokens.js',
-            format: 'javascript/es6',
+            format: 'javascript/module',
             options: { showFileHeader: false }
           }
         ]
       },
       web: {
-        transforms: [
-          'attribute/cti',
-          'name/cti/constant',
-          'time/seconds',
-          'content/icon',
-          'size/rem',
-          'color/css'
-        ],
+        transformGroup: 'scss',
         prefix: 'token',
         buildPath: 'dist/web/',
         files: [
           {
-            destination: 'tokens.scss',
+            destination: '_tokens.scss',
             format: 'scss/variables',
             options: { showFileHeader: false }
           }
         ]
       },
       android: {
-        transforms: [
-          'attribute/cti',
-          'name/cti/constant',
-          'color/hex8android',
-          'size/remToSp',
-          'size/remToDp'
-        ],
-        prefix: 'token',
+        transformGroup: 'android',
         buildPath: 'dist/android/',
         files: [
           {
-            destination: 'tokens.xml',
+            destination: 'TokensColor.xml',
             format: 'android/xml',
-            options: { showFileHeader: false }
+            filter: {
+              attributes: {
+                category: 'color'
+              }
+            }
+          },
+          {
+            destination: 'TokensFont.xml',
+            format: 'android/xml',
+            filter: {
+              attributes: {
+                category: 'font'
+              }
+            }
           }
         ]
       },
       ios: {
-        transforms: [
-          'attribute/cti',
-          'name/cti/constant',
-          'color/UIColor',
-          'content/objC/literal',
-          'asset/objC/literal',
-          'size/remToPt',
-          'font/objC/literal'
-        ],
-        prefix: 'token',
+        transformGroup: 'ios-swift-separate',
         buildPath: 'dist/ios/',
         files: [
           {
-            destination: 'tokens.h',
-            format: 'ios/macros',
-            options: { showFileHeader: false }
-          }
-        ]
-      },
-      ios: {
-        transforms: [
-          'attribute/cti',
-          'name/cti/constant',
-          'color/UIColorSwift',
-          'content/swift/literal',
-          'asset/swift/literal',
-          'size/swift/remToCGFloat',
-          'font/swift/literal'
-        ],
-        prefix: 'token',
-        buildPath: 'dist/ios/',
-        files: [
+            destination: 'TokensColor.swift',
+            format: 'ios-swift/enum.swift',
+            className: 'TokensColor',
+            options: { showFileHeader: false },
+            filter: {
+              attributes: {
+                category: 'color'
+              }
+            }
+          },
           {
-            destination: 'tokens.swift',
-            format: 'ios-swift/class.swift',
-            className: 'DesignTokens',
-            options: { showFileHeader: false }
+            destination: 'TokensFont.swift',
+            format: 'ios-swift/enum.swift',
+            className: 'TokensFont',
+            options: { showFileHeader: false },
+            filter: {
+              attributes: {
+                category: 'font'
+              }
+            }
           }
         ]
       }
