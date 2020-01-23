@@ -36,7 +36,7 @@
     "husky": "^4.2.0",
     "lodash": "^4.17.15",
     "prettier": "1.19.1",
-    "pretty-quick": "^1.11.1",
+    "pretty-quick": "^2.0.1",
     "rimraf": "^3.0.0",
     "style-dictionary": "2.8.2"
   },
