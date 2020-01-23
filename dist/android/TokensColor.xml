@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+	<color name="color_base_white">#ffffffff</color>
+	<color name="color_base_black_normal">#ff000000</color>
+	<color name="color_base_blue_medium">#ff899bbe</color>
+	<color name="color_base_blue_dark">#ff2c3645</color>
+	<color name="color_base_cyan_normal">#ff00d5f2</color>
+	<color name="color_base_gray_normal">#ff5a5a5a</color>
+	<color name="color_base_gray_light">#ffefeff4</color>
+	<color name="color_base_red_normal">#ffec696d</color>
+	<color name="color_base_orange_medium">#ffff9057</color>
+	<color name="color_base_green_normal">#ff00d288</color>
+</resources>
