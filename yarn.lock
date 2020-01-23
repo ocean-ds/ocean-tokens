@@ -599,10 +599,10 @@ strip-final-newline@^2.0.0:
   resolved "https://registry.yarnpkg.com/strip-final-newline/-/strip-final-newline-2.0.0.tgz#89b852fb2fcbe936f6f4b3187afb0a12c1ab58ad"
   integrity sha512-BrpvfNAE3dcvq7ll3xVumzjKjZQ5tI1sEUIKr3Uoks0XUl45St3FlatVqef9prk4jRDzhW6WZg+3bk93y6pLjA==
 
-style-dictionary@2.8.2:
-  version "2.8.2"
-  resolved "https://registry.yarnpkg.com/style-dictionary/-/style-dictionary-2.8.2.tgz#6da6cdc547610fe2f0f5d9f061568b608c1a06f4"
-  integrity sha512-7jePpXVeEGpvPcsy+ImyddSLRcp5oOK6EcWzsXA2pWTULibMwvWqBumyz8aVvLyDaj6k33M1yKdxVxT2M6rH8w==
+style-dictionary@2.8.3:
+  version "2.8.3"
+  resolved "https://registry.yarnpkg.com/style-dictionary/-/style-dictionary-2.8.3.tgz#bc7993450d74bb86d076bb442863e32d5430a4b0"
+  integrity sha512-eT4Xwz75avNLVy7Smt2tgmDoIEgloHDQjyGB6cuOZhEViM3I5J9yqoJRghWjORuW912UyZexDcE34aNz6BN/jw==
   dependencies:
     chalk "^2.4.1"
     commander "^2.9.0"
