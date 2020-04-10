@@ -33,7 +33,7 @@
   },
   "homepage": "https://github.com/Pagnet/design-tokens#readme",
   "devDependencies": {
-    "husky": "^4.2.0",
+    "husky": "^4.2.5",
     "lodash": "^4.17.15",
     "prettier": "1.19.1",
     "pretty-quick": "^2.0.1",
