@@ -38,7 +38,7 @@
     "prettier": "1.19.1",
     "pretty-quick": "^2.0.1",
     "rimraf": "^3.0.0",
-    "style-dictionary": "2.8.3"
+    "style-dictionary": "2.10.0"
   },
   "engines": {
     "node": ">=8.0.0"
