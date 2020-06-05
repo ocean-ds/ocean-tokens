@@ -1,0 +1,24 @@
+---
+global:
+  type: color
+  category: category-color
+
+imports:
+  - ./aliases.yml
+
+props:
+  - name: color-meiuca-primary-pure
+    value: '{!color-meiuca-primary-pure}'
+    meta:
+      friendlyName: Color Meiuca Primary Pure 
+    category: background-color
+
+  - name: color-meiuca-secondary-pure
+    value: '{!color-meiuca-secondary-pure}'
+    meta:
+      friendlyName: Color Meiuca Secondary Pure
+    category: background-color
+
+
+
+  

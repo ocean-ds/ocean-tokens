@@ -1,0 +1,39 @@
+---
+global:
+  type: color
+  category: category-color
+
+imports:
+  - ./aliases.yml
+
+props:
+  - name: color-meiuca-highlight-darkest
+    value: '{!color-meiuca-highlight-darkest}'
+    meta:
+      friendlyName: Color Meiuca Highlight Darkest 
+    category: background-color
+
+  - name: color-meiuca-highlight-dark
+    value: '{!color-meiuca-highlight-dark}'
+    meta:
+      friendlyName: Color Meiuca Highlight Dark 
+    category: background-color
+
+  - name: color-meiuca-highlight-medium
+    value: '{!color-meiuca-highlight-medium}'
+    meta:
+      friendlyName: Color Meiuca Highlight Medium 
+    category: background-color
+
+  - name: color-meiuca-highlight-light
+    value: '{!color-meiuca-highlight-light}'
+    meta:
+      friendlyName: Color Meiuca Highlight Light 
+    category: background-color
+
+  - name: color-meiuca-highlight-lightest
+    value: '{!color-meiuca-highlight-lightest}'
+    meta:
+      friendlyName: Color Meiuca Highlight Lightest 
+    category: background-color
+

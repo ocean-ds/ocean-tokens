@@ -1,0 +1,11 @@
+---
+global:
+  type: colors
+  category: all
+
+imports:
+  - ./brand.yml
+  - ./highlight.yml
+  - ./neutral.yml
+ 
+
