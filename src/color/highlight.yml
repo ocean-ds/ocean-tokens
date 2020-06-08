@@ -7,33 +7,27 @@ imports:
   - ./aliases.yml
 
 props:
-  - name: color-meiuca-highlight-darkest
-    value: '{!color-meiuca-highlight-darkest}'
+  - name: color-highlight-pure
+    value: '{!color-highlight-pure}'
     meta:
-      friendlyName: Color Meiuca Highlight Darkest 
+      friendlyName: Color highlight Pure
     category: background-color
 
-  - name: color-meiuca-highlight-dark
-    value: '{!color-meiuca-highlight-dark}'
+  - name: color-highlight-up
+    value: '{!color-highlight-up}'
     meta:
-      friendlyName: Color Meiuca Highlight Dark 
+      friendlyName: Color highlight Up
     category: background-color
 
-  - name: color-meiuca-highlight-medium
-    value: '{!color-meiuca-highlight-medium}'
+  - name: color-highlight-down
+    value: '{!color-highlight-down}'
     meta:
-      friendlyName: Color Meiuca Highlight Medium 
+      friendlyName: Color highlight Down
     category: background-color
 
-  - name: color-meiuca-highlight-light
-    value: '{!color-meiuca-highlight-light}'
+  - name: color-highlight-deep
+    value: '{!color-highlight-deep}'
     meta:
-      friendlyName: Color Meiuca Highlight Light 
-    category: background-color
-
-  - name: color-meiuca-highlight-lightest
-    value: '{!color-meiuca-highlight-lightest}'
-    meta:
-      friendlyName: Color Meiuca Highlight Lightest 
+      friendlyName: Color highlight Deep
     category: background-color
 

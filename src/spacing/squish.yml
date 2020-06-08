@@ -3,20 +3,21 @@ global:
   type: unit
   category: spacing
 
-imports:
-- ./aliases.yml
-
 props:
+  - name: spacing-squish-xs
+    value: 4px 8px
+    category: spacing
+
   - name: spacing-squish-sm
-    value: '{!spacing-xx-small} {!spacing-x-small}'
-    category: spacing-squish
+    value: 8px 16px
+    category: spacing
 
   - name: spacing-squish-md
-    value: '{!spacing-x-small} {!spacing-small}'
-    category: spacing-squish
+    value: 12px 24px
+    category: spacing
 
   - name: spacing-squish-lg
-    value: '{!spacing-x-small} {!spacing-medium}'
-    category: spacing-squish
+    value: 16px 32px
+    category: spacing
 
 

@@ -3,9 +3,6 @@ global:
   type: unit
   category: spacing
 
-imports:
-- ./aliases.yml
-
 props:
   - name: spacing-stack-xxxs
     value: 4px

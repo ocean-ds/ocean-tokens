@@ -6,6 +6,8 @@ global:
 imports:
   - ./brand.yml
   - ./highlight.yml
-  - ./neutral.yml
+  - ./complementary.yml
+  - ./interface.yml
+  - ./status.yml
  
 

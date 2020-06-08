@@ -3,9 +3,6 @@ global:
   type: unit
   category: spacing
 
-imports:
-- ./aliases.yml
-
 props:
   - name: spacing-inset-xxs
     value: 4px
@@ -23,10 +20,10 @@ props:
     value: 24px
     category: spacing
 
-  - name: spacing-inset-xlg
-    value: '{!spacing-medium}'
+  - name: spacing-inset-lg
+    value: 32px
     category: spacing
 
-  - name: spacing-inset-xxlg
-    value: '{!spacing-large}'
+  - name: spacing-inset-xl
+    value: 40px
     category: spacing

@@ -7,17 +7,31 @@ imports:
   - ./aliases.yml
 
 props:
-  - name: color-meiuca-primary-pure
-    value: '{!color-meiuca-primary-pure}'
+  - name: color-brand-primary-pure
+    value: '{!color-brand-primary-pure}'
     meta:
-      friendlyName: Color Meiuca Primary Pure 
+      friendlyName: Color Brand Primary Pure 
     category: background-color
 
-  - name: color-meiuca-secondary-pure
-    value: '{!color-meiuca-secondary-pure}'
+  - name: color-brand-primary-up
+    value: '{!color-brand-primary-up}'
     meta:
-      friendlyName: Color Meiuca Secondary Pure
+      friendlyName: Color Brand Primary Up
     category: background-color
+
+  - name: color-brand-primary-down
+    value: '{!color-brand-primary-down}'
+    meta:
+      friendlyName: Color Brand Primary Down
+    category: background-color
+
+  - name: color-brand-primary-deep
+    value: '{!color-brand-primary-deep}'
+    meta:
+      friendlyName: Color Brand Primary Deep
+    category: background-color
+
+
 
 
 
