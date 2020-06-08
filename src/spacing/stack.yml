@@ -12,33 +12,33 @@ props:
     category: spacing
 
   - name: spacing-stack-xxs
-    value: '{!spacing-xx-small}'
+    value: 8px
     category: spacing
 
   - name: spacing-stack-xs
-    value: '{!spacing-x-small}'
+    value: 16px
     category: spacing
 
   - name: spacing-stack-sm
-    value: '{!spacing-small}'
+    value: 24px
     category: spacing
 
   - name: spacing-stack-md
-    value: '{!spacing-medium}'
+    value: 40px
     category: spacing
 
   - name: spacing-stack-lg
-    value: '{!spacing-large}'
+    value: 64px
     category: spacing
 
   - name: spacing-stack-xl
-    value: '{!spacing-x-large}'
+    value: 80px
     category: spacing
 
   - name: spacing-stack-xxl
-    value: '{!spacing-xx-large}'
+    value: 128px
     category: spacing
 
   - name: spacing-stack-xxxl
-    value: '{!spacing-xxx-large}'
+    value: 200px
     category: spacing
