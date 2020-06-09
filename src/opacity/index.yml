@@ -3,20 +3,23 @@ global:
   type: number
   category: opacity
 
+imports:
+  - ./aliases.yml
+
 props:
   - name: opacity-level-semiopaque
-    value: '0.8'
+    value: '{!opacity-level-semiopaque}' 
 
   - name: opacity-level-intense
-    value: '0.64'
+    value: '{!opacity-level-intense}'
 
   - name: opacity-level-medium
-    value: '0.40'
+    value: '{!opacity-level-medium}'
 
   - name: opacity-level-light
-    value: '0.16'
+    value: '{!opacity-level-light}'
 
   - name: opacity-level-semitransparent
-    value: '0.8'
+    value: '{!opacity-level-semitransparent}'
 
 
