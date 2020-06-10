@@ -11,7 +11,7 @@
   "scripts": {
     "clean": "rimraf dist",
     "web": "theo src/tokens.yml  --transform web --format scss --dest dist",
-    "android": "theo src/tokens.yml --transform android --format android.xml --dest dist"
+    "android": "theo src/tokens.yml --setup android-formats.js --transform android --format android.xml --dest dist --resolveMetaAliases"
   },
   "husky": {
     "hooks": {
