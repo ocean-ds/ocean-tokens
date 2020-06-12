@@ -8,6 +8,7 @@ module.exports = (theo) => {
     (prop) =>
       prop.get('type') === 'size' && prop.get('category') === 'font-size',
     (prop) => {
+      //console.info(JSON.stringify(prop, null, 2));
       return theoReplaceAll(`${prop.get('value')}`, 'px', '') + 'sp';
     },
   );
