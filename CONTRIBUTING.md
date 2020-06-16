@@ -41,6 +41,6 @@ Adding, removing, and updating design tokens should be discussed in the issues o
 
 When releasing a new version, follow these steps on `master`:
 
-1.  Update [CHANGELOG.md](https://github.com/Shopify/polaris-tokens/blob/master/CHANGELOG.md) and commit the changes
+1.  Update [CHANGELOG.md](https://github.com/Pagnet/design-tokens/blob/master/CHANGELOG.md) and commit the changes
 2.  Run `yarn version` and assign a new version
 3.  Run `git push --follow-tags`

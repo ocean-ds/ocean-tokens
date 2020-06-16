@@ -1,6 +1,6 @@
 {
   "name": "@pagnet/tokens",
-  "version": "1.0.1",
+  "version": "1.0.0-alpha",
   "private": false,
   "description": "A design tokens project",
   "main": "dist/index.js",
