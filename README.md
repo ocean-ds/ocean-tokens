@@ -36,6 +36,11 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 Please make sure to use the english language everywhere ;)
 
+### Code of conduct
+
+We have a [code of conduct](https://github.com/Pagnet/design-tokens/blob/master/CODE_OF_CONDUCT.md),
+please follow it in all your interactions with the project.
+
 <details>
   <summary><strong>Pending features</strong> (click to expand)</summary>
 
