@@ -36,6 +36,11 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 Please make sure to use the english language everywhere ;)
 
+### Contributing guide
+
+Read the [contributing guide](https://github.com/Pagnet/design-tokens/blob/master/CONTRIBUTING.md)
+to learn how to propose changes and understand our development process.
+
 <details>
   <summary><strong>Pending features</strong> (click to expand)</summary>
 
@@ -43,10 +48,9 @@ Please make sure to use the english language everywhere ;)
 
 - [x] Initial configuration to export the tokens on the platforms: Android, iOS and Web
 - [ ] Configure the build process to generate the documentation for the tokens
-- [ ] Add tests?
 - [ ] Add license
 - [ ] Publish tokens on packages manager
-- [ ] Add contribution guide (Issue template, PR template)
+- [x] Add contribution guide (Issue template, PR template)
 - [ ] Host the versied documentation of the tokens
 - [ ] Configure CI/CD (With Github Actions and Github Packages)
 
