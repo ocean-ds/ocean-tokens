@@ -54,9 +54,9 @@ workflows:
     jobs:
       - build-setup
       - build-web:
-        requires:
-          - build-setup
+          requires:
+            - build-setup
       - deploy-docs:
-        requires:
-          - build-setup
-          - build-web
+          requires:
+            - build-setup
+            - build-web
