@@ -1,0 +1,22 @@
+version: 2.1
+orbs:
+  node: circleci/node@1.1.6
+jobs:
+  build:
+    executor:
+      name: node/default
+    steps:
+      - checkout
+      - node/with-cache:
+          steps:
+            - run:
+                name: Install Yarn package manager
+                command: |
+                curl -o- -L https://yarnpkg.com/install.sh | bash
+            - run:
+                name: Install javascript dependencies (using Yarn)
+                command: yarn install --ignore-engines
+workflows:
+    build:
+      jobs:
+        - build
