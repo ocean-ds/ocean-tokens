@@ -11,7 +11,7 @@
   "scripts": {
     "clean": "rimraf dist",
     "preandroid": "node android/pre-script.js",
-    "web": "theo src/tokens.yml  --transform web --format scss,module.js,json --dest dist",
+    "web": "theo src/tokens.yml --transform web --format scss,module.js,json --dest dist",
     "android": "theo src/tokens.yml --setup android/android-formats.js --transform android --format blu.android.xml --dest dist --resolveMetaAliases"
   },
   "husky": {
@@ -32,6 +32,7 @@
   "homepage": "https://github.com/Pagnet/design-tokens#readme",
   "devDependencies": {
     "husky": "^4.2.0",
+    "optimist": "^0.6.1",
     "prettier": "2.0.5",
     "pretty-quick": "^2.0.1",
     "rimraf": "^3.0.0",

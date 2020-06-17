@@ -1,26 +1,26 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-const _ = require("lodash");
-const xml = require("xml");
+const _ = require('lodash');
+const xml = require('xml');
 
-module.exports = def => {
+module.exports = (def) => {
   const o = {
     resources: def
-      .get("props")
-      .map(prop => {
+      .get('props')
+      .map((prop) => {
         const key = (() => {
-          switch (prop.get("type")) {
-            case "color":
-              return "color";
-            case "size":
-              return "dimen";
-            case "number":
-              return "integer";
-            case "string":
-              return "string";
+          switch (prop.get('type')) {
+            case 'color':
+              return 'color';
+            case 'size':
+              return 'dimen';
+            case 'number':
+              return 'integer';
+            case 'string':
+              return 'string';
             default:
-              return "dimen";
+              return 'dimen';
           }
         })();
 
@@ -28,18 +28,18 @@ module.exports = def => {
           [key]: [
             {
               _attr: {
-                name: _.toLower(prop.get("name")).replace(/[-]/g, "_"),
-                category: prop.get("category")
-              }
+                name: _.toLower(prop.get('name')).replace(/[-]/g, '_'),
+                category: prop.get('category'),
+              },
             },
-            prop.get("value")
-          ]
+            prop.get('value'),
+          ],
         };
       })
-      .toJS()
+      .toJS(),
   };
   return xml(o, {
-    indent: "  ",
-    declaration: true
+    indent: '  ',
+    declaration: true,
   });
 };

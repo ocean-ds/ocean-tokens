@@ -10,7 +10,7 @@ module.exports = (theo) => {
     (prop) => {
       //console.info(JSON.stringify(prop, null, 2));
       return theoReplaceAll(`${prop.get('value')}`, 'px', '') + 'sp';
-    },
+    }
   );
 
   theo.registerValueTransform(
@@ -19,7 +19,7 @@ module.exports = (theo) => {
       prop.get('type') === 'unit' && prop.get('category') === 'border-width',
     (prop) => {
       return theoReplaceAll(`${prop.get('value')}`, 'px', '') + 'dp';
-    },
+    }
   );
 
   theo.registerValueTransform(
@@ -27,7 +27,7 @@ module.exports = (theo) => {
     (prop) => prop.get('type') === 'unit' && prop.get('category') === 'radius',
     (prop) => {
       return theoReplaceAll(`${prop.get('value')}`, 'px', '') + 'dp';
-    },
+    }
   );
 
   theo.registerTransform('android', [
