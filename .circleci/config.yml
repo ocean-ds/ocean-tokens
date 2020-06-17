@@ -15,6 +15,10 @@ jobs:
             - run:
                 name: Install javascript dependencies (using Yarn)
                 command: yarn install --ignore-engines
+            - persist_to_workspace:
+                root: dist
+                paths:
+                  - tokens.html
   build-web:
     executor:
       name: node/default
@@ -32,13 +36,6 @@ jobs:
       - checkout
       - node/with-cache:
           steps:
-            - run:
-                name: Build design tokens docs
-                command: yarn docs
-            - persist_to_workspace:
-                root: dist
-                paths:
-                  - tokens.html
             - run:
                 name: Install gh-pages dependencies
                 command: |
