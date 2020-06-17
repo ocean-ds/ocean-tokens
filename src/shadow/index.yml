@@ -13,7 +13,7 @@ props:
     category: box-shadow
 
   - name: shadow-level-2
-    value: 0 8px 16px rgba(12, 13, 20, {!opacity-level-semitransparent}) 
+    value: 0 8px 16px rgba(12, 13, 20, {!opacity-level-semitransparent})
     category: box-shadow
 
   - name: shadow-level-3

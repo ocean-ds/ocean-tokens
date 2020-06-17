@@ -10,7 +10,7 @@ props:
   - name: color-brand-primary-pure
     value: '{!color-brand-primary-pure}'
     meta:
-      friendlyName: Color Brand Primary Pure 
+      friendlyName: Color Brand Primary Pure
     category: background-color
 
   - name: color-brand-primary-up
@@ -30,9 +30,3 @@ props:
     meta:
       friendlyName: Color Brand Primary Deep
     category: background-color
-
-
-
-
-
-  

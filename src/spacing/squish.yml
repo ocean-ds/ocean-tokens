@@ -19,5 +19,3 @@ props:
   - name: spacing-squish-lg
     value: 16px 32px
     category: spacing
-
-
