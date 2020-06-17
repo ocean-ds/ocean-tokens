@@ -2,7 +2,7 @@ version: 2.1
 orbs:
   node: circleci/node@1.1.6
 jobs:
-  build:
+  build-setup:
     executor:
       name: node/default
     steps:
@@ -15,10 +15,18 @@ jobs:
             - run:
                 name: Install javascript dependencies (using Yarn)
                 command: yarn install --ignore-engines
+  build-web:
+    executor:
+      name: node/default
+    steps:
+      - checkout
+      - node/with-cache:
+          steps:
             - run:
                 name: Build design tokens for web
                 command: yarn web
 workflows:
-  build:
+  build-deploy:
     jobs:
-      - build
+      - build-setup
+      - build-web
