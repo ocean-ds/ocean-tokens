@@ -39,7 +39,7 @@ jobs:
             - run:
                 name: Install gh-pages dependencies
                 command: |
-                  yarn global add gh-pages --silent
+                  yarn global add gh-pages@2.0.1 --silent
                   git config user.email "ops@useblu.com.br"
                   git config user.name "Blu"
             - run:
