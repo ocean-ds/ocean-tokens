@@ -36,6 +36,8 @@ jobs:
       - checkout
       - node/with-cache:
           steps:
+            - attach_workspace:
+                at: dist
             - run:
                 name: Install gh-pages dependencies
                 command: |
