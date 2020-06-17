@@ -26,8 +26,8 @@ jobs:
                 name: Build design tokens for web
                 command: yarn web
   deploy-docs:
-    executor:
-      name: node/default
+    docker:
+      - image: node:8.10.0
     steps:
       - checkout
       - node/with-cache:
@@ -53,5 +53,10 @@ workflows:
   build-deploy:
     jobs:
       - build-setup
-      - build-web
-      - deploy-docs
+      - build-web:
+        requires:
+          - build-setup
+      - deploy-docs:
+        requires:
+          - build-setup
+          - build-web
