@@ -25,8 +25,31 @@ jobs:
             - run:
                 name: Build design tokens for web
                 command: yarn web
+  deploy-docs:
+    executor:
+      name: node/default
+    steps:
+      - checkout
+      - node/with-cache:
+          steps:
+            - run:
+                name: Build design tokens docs
+                command: yarn docs
+            - persist_to_workspace:
+                paths: dist/tokens.html
+            - run:
+                name: Install gh-pages dependencies
+                commmand: |
+                  yarn global add gh-pages --silent
+                  git config user.email "ops@useblu.com.br"
+                  git config user.name "Blu"
+            - run:
+                name: Deploy docs to gh-pages branch
+                command: gh-pages --dist dist/tokens.html
+
 workflows:
   build-deploy:
     jobs:
       - build-setup
       - build-web
+      - deploy-docs

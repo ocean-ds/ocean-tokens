@@ -12,6 +12,7 @@
     "clean": "rimraf dist",
     "preandroid": "node android/pre-script.js",
     "web": "theo src/tokens.yml --transform web --format scss,module.js,json --dest dist",
+    "docs": "theo src/tokens.yml --transform web --format html --dest dist",
     "android": "theo src/tokens.yml --setup android/android-formats.js --transform android --format blu.android.xml --dest dist --resolveMetaAliases"
   },
   "husky": {
