@@ -39,7 +39,7 @@ jobs:
                 paths: dist/tokens.html
             - run:
                 name: Install gh-pages dependencies
-                commmand: |
+                command: |
                   yarn global add gh-pages --silent
                   git config user.email "ops@useblu.com.br"
                   git config user.name "Blu"
