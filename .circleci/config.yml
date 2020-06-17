@@ -11,12 +11,14 @@ jobs:
           steps:
             - run:
                 name: Install Yarn package manager
-                command: |
-                curl -o- -L https://yarnpkg.com/install.sh | bash
+                command: curl -o- -L https://yarnpkg.com/install.sh | bash
             - run:
                 name: Install javascript dependencies (using Yarn)
                 command: yarn install --ignore-engines
+            - run:
+                name: Build design tokens for web
+                command: yarn web
 workflows:
-    build:
-      jobs:
-        - build
+  build:
+    jobs:
+      - build
