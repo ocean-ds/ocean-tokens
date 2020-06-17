@@ -20,10 +20,7 @@
     }
   },
   "author": "Blu Pagamentos <devs@useblu.com.br>",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Pagnet/design-tokens.git"
-  },
+  "repository": "git+https://github.com/Pagnet/design-tokens.git",
   "keywords": [
     "design-tokens",
     "theo",
@@ -42,5 +39,6 @@
   },
   "engines": {
     "node": ">=12.0.0"
-  }
+  },
+  "license": "GPL-3.0"
 }
