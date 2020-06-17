@@ -1,6 +1,6 @@
 {
   "name": "@pagnet/tokens",
-  "version": "1.0.0",
+  "version": "1.0.0-alpha",
   "private": false,
   "description": "A design tokens project",
   "main": "dist/index.js",
@@ -11,7 +11,7 @@
   "scripts": {
     "clean": "rimraf dist",
     "preandroid": "node android/pre-script.js",
-    "web": "theo src/tokens.yml  --transform web --format scss,module.js --dest dist",
+    "web": "theo src/tokens.yml  --transform web --format scss,module.js,json --dest dist",
     "android": "theo src/tokens.yml --setup android/android-formats.js --transform android --format blu.android.xml --dest dist --resolveMetaAliases"
   },
   "husky": {
