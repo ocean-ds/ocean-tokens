@@ -36,7 +36,9 @@ jobs:
                 name: Build design tokens docs
                 command: yarn docs
             - persist_to_workspace:
-                paths: dist/tokens.html
+                root: dist
+                paths:
+                  - tokens.html
             - run:
                 name: Install gh-pages dependencies
                 command: |
