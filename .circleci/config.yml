@@ -38,7 +38,7 @@ jobs:
             - persist_to_workspace:
                 root: dist
                 paths:
-                  - tokens.html
+                  - docs
   deploy-docs:
     docker:
       - image: node:8.10.0
@@ -59,7 +59,7 @@ jobs:
                   - 'a5:5a:8c:13:52:b8:b1:23:bd:a9:e5:d0:f3:1d:4d:4c'
             - run:
                 name: Deploy docs to gh-pages branch
-                command: gh-pages --dist dist
+                command: gh-pages --dist dist/docs
 
 workflows:
   build-deploy:

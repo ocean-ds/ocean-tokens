@@ -15,12 +15,13 @@ gulp.task('build-docs', () => {
         format: { type: 'html' },
       })
     )
-    .pipe(gulp.dest('dist'));
+    .pipe($.rename('index.html'))
+    .pipe(gulp.dest('dist/docs'));
 });
 
 gulp.task('doc-base-url', () => {
   return gulp
-    .src('dist/tokens.html')
+    .src('dist/docs/index.html')
     .pipe(
       dom(function () {
         // cache/create all elements you will work with --'this' is your Document
@@ -32,7 +33,7 @@ gulp.task('doc-base-url', () => {
         return this;
       })
     )
-    .pipe(gulp.dest('dist'));
+    .pipe(gulp.dest('dist/docs'));
 });
 
 gulp.task('docs', gulp.series(['build-docs', 'doc-base-url']));
