@@ -56,7 +56,7 @@ jobs:
                   git config user.name "Blu"
             - run:
                 name: Deploy docs to gh-pages branch
-                command: gh-pages --dist dist/tokens.html
+                command: gh-pages --dist dist
 
 workflows:
   build-deploy:
