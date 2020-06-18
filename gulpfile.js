@@ -1,0 +1,38 @@
+const gulp = require('gulp');
+const dom = require('gulp-dom');
+const theo = require('theo');
+
+const gulpLoadPlugins = require('gulp-load-plugins');
+
+const $ = gulpLoadPlugins();
+
+gulp.task('build-docs', () => {
+  return gulp
+    .src('src/tokens.yml')
+    .pipe(
+      $.theo({
+        transform: { type: 'web' },
+        format: { type: 'html' },
+      })
+    )
+    .pipe(gulp.dest('dist'));
+});
+
+gulp.task('doc-base-url', () => {
+  return gulp
+    .src('dist/tokens.html')
+    .pipe(
+      dom(function () {
+        // cache/create all elements you will work with --'this' is your Document
+        const header = this.querySelector('head');
+        const base = this.createElement('base');
+        base.href = '/';
+
+        header.appendChild(base);
+        return this;
+      })
+    )
+    .pipe(gulp.dest('dist'));
+});
+
+gulp.task('docs', gulp.series(['build-docs', 'doc-base-url']));
