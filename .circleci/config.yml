@@ -25,10 +25,6 @@ jobs:
             - run:
                 name: Build design tokens for web
                 command: yarn web
-            - persist_to_workspace:
-                root: dist
-                paths:
-                  - tokens.html
   build-docs:
     executor:
       name: node/default
