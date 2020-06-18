@@ -32,10 +32,15 @@ jobs:
   build-docs:
     executor:
       name: node/default
+    environment:
+      - NODE_ENV: development
     steps:
       - checkout
       - node/with-cache:
           steps:
+            - run:
+                name: Install javascript dependencies (using Yarn)
+                command: yarn install --ignore-engines
             - run:
                 name: Build design tokens for web
                 command: yarn docs
