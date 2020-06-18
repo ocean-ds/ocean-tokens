@@ -27,7 +27,7 @@ gulp.task('doc-base-url', () => {
         // cache/create all elements you will work with --'this' is your Document
         const header = this.querySelector('head');
         const base = this.createElement('base');
-        base.href = '/';
+        base.href = 'https://pagnet.github.io/design-tokens/';
 
         header.appendChild(base);
         return this;
