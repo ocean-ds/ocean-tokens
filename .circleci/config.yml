@@ -29,6 +29,20 @@ jobs:
                 root: dist
                 paths:
                   - tokens.html
+  build-docs:
+    executor:
+      name: node/default
+    steps:
+      - checkout
+      - node/with-cache:
+          steps:
+            - run:
+                name: Build design tokens for web
+                command: yarn docs
+            - persist_to_workspace:
+                root: dist
+                paths:
+                  - tokens.html
   deploy-docs:
     docker:
       - image: node:8.10.0
@@ -55,7 +69,10 @@ workflows:
       - build-web:
           requires:
             - build-setup
+      - build-docs:
+          requires:
+            - build-setup
       - deploy-docs:
           requires:
             - build-setup
-            - build-web
+            - build-docs

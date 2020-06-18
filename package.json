@@ -12,7 +12,8 @@
     "clean": "rimraf dist",
     "preandroid": "node android/pre-script.js",
     "web": "theo src/tokens.yml --transform web --format scss,module.js,json,html --dest dist",
-    "android": "theo src/tokens.yml --setup android/android-formats.js --transform android --format blu.android.xml --dest dist --resolveMetaAliases"
+    "android": "theo src/tokens.yml --setup android/android-formats.js --transform android --format blu.android.xml --dest dist --resolveMetaAliases",
+    "docs": "gulp docs"
   },
   "husky": {
     "hooks": {
@@ -31,6 +32,10 @@
   },
   "homepage": "https://github.com/Pagnet/design-tokens#readme",
   "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-dom": "^1.0.0",
+    "gulp-load-plugins": "^2.0.3",
+    "gulp-theo": "^2.0.1",
     "husky": "^4.2.0",
     "optimist": "^0.6.1",
     "prettier": "2.0.5",
