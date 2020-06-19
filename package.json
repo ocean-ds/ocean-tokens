@@ -47,8 +47,5 @@
   "engines": {
     "node": ">=12.0.0"
   },
-  "license": "GPL-3.0",
-  "dependencies": {
-    "gh-pages": "^3.0.0"
-  }
+  "license": "GPL-3.0"
 }
