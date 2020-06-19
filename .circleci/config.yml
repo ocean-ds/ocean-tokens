@@ -1,10 +1,11 @@
 version: 2.1
+
 orbs:
   node: circleci/node@1.1.6
+
 jobs:
   build-setup:
-    executor:
-      name: node/default
+    executor: node/default
     steps:
       - checkout
       - node/with-cache:
@@ -15,33 +16,33 @@ jobs:
             - run:
                 name: Install javascript dependencies (using Yarn)
                 command: yarn install --ignore-engines
+
   build-web:
-    executor:
-      name: node/default
+    executor: node/default
     steps:
       - checkout
       - node/with-cache:
           steps:
             - run:
                 name: Build design tokens for web
-                command: yarn web
+                command: yarn build:web
+
   build-docs:
-    executor:
-      name: node/default
+    executor: node/default
     steps:
       - checkout
       - node/with-cache:
           steps:
             - run:
                 name: Build design tokens for docs
-                command: yarn docs
+                command: yarn build:docs
             - persist_to_workspace:
                 root: dist
                 paths:
                   - docs
+
   deploy-docs:
-    docker:
-      - image: node:8.10.0
+    executor: node/default
     steps:
       - checkout
       - node/with-cache:
@@ -49,14 +50,8 @@ jobs:
             - attach_workspace:
                 at: dist
             - run:
-                name: Install gh-pages dependencies
-                command: |
-                  yarn global add gh-pages@2.0.1 --silent
-                  git config user.email "ops@useblu.com.br"
-                  git config user.name "Blu"
-            - run:
                 name: Deploy docs to gh-pages branch
-                command: gh-pages --dist dist/docs
+                command: yarn deploy:docs
 
 workflows:
   build-deploy:
