@@ -1,0 +1,72 @@
+version: 2.1
+
+orbs:
+  node: circleci/node@1.1.6
+
+jobs:
+  build-setup:
+    executor: node/default
+    steps:
+      - checkout
+      - node/with-cache:
+          steps:
+            - run:
+                name: Install Yarn package manager
+                command: curl -o- -L https://yarnpkg.com/install.sh | bash
+            - run:
+                name: Install javascript dependencies (using Yarn)
+                command: yarn install --ignore-engines
+
+  build-web:
+    executor: node/default
+    steps:
+      - checkout
+      - node/with-cache:
+          steps:
+            - run:
+                name: Build design tokens for web
+                command: yarn build:web
+
+  build-docs:
+    executor: node/default
+    steps:
+      - checkout
+      - node/with-cache:
+          steps:
+            - run:
+                name: Build design tokens for docs
+                command: yarn build:docs
+            - persist_to_workspace:
+                root: dist
+                paths:
+                  - docs
+
+  deploy-docs:
+    executor: node/default
+    steps:
+      - checkout
+      - node/with-cache:
+          steps:
+            - attach_workspace:
+                at: dist
+            - run:
+                name: Deploy docs to gh-pages branch
+                command: yarn deploy:docs
+
+workflows:
+  build-deploy:
+    jobs:
+      - build-setup
+      - build-web:
+          requires:
+            - build-setup
+      - build-docs:
+          requires:
+            - build-setup
+      - deploy-docs:
+          requires:
+            - build-docs
+          filters:
+            branches:
+              only:
+                - master
