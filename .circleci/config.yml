@@ -50,6 +50,11 @@ jobs:
             - attach_workspace:
                 at: dist
             - run:
+                name: Configure commit account
+                command: |
+                  git config user.email "ops@useblu.com.br"
+                  git config user.name "Blu"
+            - run:
                 name: Deploy docs to gh-pages branch
                 command: yarn deploy:docs
 
