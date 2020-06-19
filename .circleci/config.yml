@@ -59,6 +59,26 @@ jobs:
                 command: gh-pages --dist dist/docs
 
 workflows:
+  nightly:
+    triggers:
+      - schedule:
+          cron: '0 00,01,02,03,04,05,06,07,08,18,19,20,21,22,23 * * *'
+          filters:
+            branches:
+              only:
+                - master
+    jobs:
+      - build-setup
+      - build-web:
+          requires:
+            - build-setup
+      - build-docs:
+          requires:
+            - build-setup
+      - deploy-docs:
+          requires:
+            - build-setup
+            - build-docs
   build-deploy:
     jobs:
       - build-setup
