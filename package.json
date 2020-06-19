@@ -10,10 +10,10 @@
   ],
   "scripts": {
     "clean": "rimraf dist",
-    "preandroid": "node android/pre-script.js",
+    "preandroid": "node scripts/android/pre-script.js",
     "web": "theo src/tokens.yml --transform web --format scss,module.js,json --dest dist",
-    "android": "theo src/tokens.yml --setup android/android-formats.js --transform android --format blu.android.xml --dest dist --resolveMetaAliases",
-    "docs": "gulp docs"
+    "android": "theo src/tokens.yml --setup scripts/android/android-formats.js --transform android --format blu.android.xml --dest dist --resolveMetaAliases",
+    "docs": "gulp docs --gulpfile scripts/gulpfile.js"
   },
   "husky": {
     "hooks": {
@@ -30,7 +30,7 @@
   "bugs": {
     "url": "https://github.com/Pagnet/design-tokens/issues"
   },
-  "homepage": "https://github.com/Pagnet/design-tokens#readme",
+  "homepage": "https://pagnet.github.io/design-tokens/",
   "devDependencies": {
     "gulp": "^4.0.2",
     "gulp-dom": "^1.0.0",

@@ -1,10 +1,9 @@
 version: 2.1
 orbs:
-  node: circleci/node@1.1.6
+  node: circleci/node@3.0.0
 jobs:
   build-setup:
-    executor:
-      name: node/default
+    executor: node/default
     steps:
       - checkout
       - node/with-cache:
@@ -16,8 +15,7 @@ jobs:
                 name: Install javascript dependencies (using Yarn)
                 command: yarn install --ignore-engines
   build-web:
-    executor:
-      name: node/default
+    executor: node/default
     steps:
       - checkout
       - node/with-cache:
@@ -26,14 +24,13 @@ jobs:
                 name: Build design tokens for web
                 command: yarn web
   build-docs:
-    executor:
-      name: node/default
+    executor: node/default
     steps:
       - checkout
       - node/with-cache:
           steps:
             - run:
-                name: Build design tokens for web
+                name: Build design tokens for docs
                 command: yarn docs
             - persist_to_workspace:
                 root: dist
@@ -59,26 +56,6 @@ jobs:
                 command: gh-pages --dist dist/docs
 
 workflows:
-  nightly:
-    triggers:
-      - schedule:
-          cron: '0 00,01,02,03,04,05,06,07,08,18,19,20,21,22,23 * * *'
-          filters:
-            branches:
-              only:
-                - master
-    jobs:
-      - build-setup
-      - build-web:
-          requires:
-            - build-setup
-      - build-docs:
-          requires:
-            - build-setup
-      - deploy-docs:
-          requires:
-            - build-setup
-            - build-docs
   build-deploy:
     jobs:
       - build-setup
@@ -92,3 +69,7 @@ workflows:
           requires:
             - build-setup
             - build-docs
+          filters:
+            branches:
+              only:
+                - master
