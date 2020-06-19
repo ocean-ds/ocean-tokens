@@ -1,6 +1,6 @@
 # Design tokens
 
-[![Pagnet](https://circleci.com/gh/Pagnet/design-tokens.svg?style=shield)](https://circleci.com/gh/Pagnet/design-tokens) [![Maintainability](https://api.codeclimate.com/v1/badges/3bd94959d7302d83057d/maintainability)](https://codeclimate.com/repos/5d9101d66ac2d031ba00001e/maintainability) [![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=Pagnet/design-tokens&identifier=206170935)](https://dependabot.com) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
+[![Pagnet](https://circleci.com/gh/Pagnet/design-tokens/tree/master.svg?style=shield)](https://circleci.com/gh/Pagnet/design-tokens/tree/master) [![Maintainability](https://api.codeclimate.com/v1/badges/3bd94959d7302d83057d/maintainability)](https://codeclimate.com/repos/5d9101d66ac2d031ba00001e/maintainability) [![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=Pagnet/design-tokens&identifier=206170935)](https://dependabot.com) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
 This is an internal project at Blu Pagamentos powered by [Theo](https://github.com/salesforce-ux/theo) that provides design tokens for our design system.
 
