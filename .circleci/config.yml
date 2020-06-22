@@ -91,7 +91,7 @@ workflows:
               ignore: /.*/
       - deploy-web:
           requires:
-            - build-setup
+            - build-web
           filters:
             tags:
               only: /^v.*/
