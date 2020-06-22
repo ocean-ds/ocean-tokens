@@ -68,6 +68,9 @@ jobs:
                 name: Authenticate with registry
                 command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/project/.npmrc
             - run:
+                name: Build design tokens for web
+                command: yarn build:web
+            - run:
                 name: Bump package version by tag
                 command: |
                   export VERSION_TAG=$(echo $CIRCLE_TAG | awk '{print substr($1,2); }')
