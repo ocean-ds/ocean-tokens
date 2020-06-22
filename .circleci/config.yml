@@ -88,6 +88,6 @@ workflows:
             branches:
               only:
                 - master
-      - deploy-package-web:
+      - deploy-web:
           requires:
             - build-setup
