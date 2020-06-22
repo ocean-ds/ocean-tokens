@@ -27,8 +27,8 @@ jobs:
                 name: Build design tokens for web
                 command: yarn build:web
             - persist_to_workspace:
-                root: ~/
-                paths: dist
+                root: dist
+                paths: ~/
 
   build-docs:
     executor: node/default
