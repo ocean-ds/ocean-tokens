@@ -69,7 +69,7 @@ jobs:
                 command: echo "//registry.npmjs.org/:_authToken=$npm_TOKEN" > ~/project/.npmrc
             - run:
                 name: Publish package
-                command: npm publish
+                command: npm publish --access public
 
 workflows:
   build-deploy:
@@ -91,3 +91,8 @@ workflows:
       - deploy-web:
           requires:
             - build-setup
+          filters:
+            tags:
+              only: /^v.*/
+            branches:
+              ignore: /.*/
