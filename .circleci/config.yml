@@ -27,9 +27,7 @@ jobs:
                 name: Build design tokens for web
                 command: yarn build:web
             - persist_to_workspace:
-                root: ~/
-                paths:
-                  - dist
+                root: dist
 
   build-docs:
     executor: node/default
@@ -69,7 +67,7 @@ jobs:
       - node/with-cache:
           steps:
             - attach_workspace:
-                at: ~/
+                at: dist
             - run:
                 name: Authenticate with registry
                 command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/project/.npmrc
