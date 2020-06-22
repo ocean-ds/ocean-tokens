@@ -58,6 +58,19 @@ jobs:
                 name: Deploy docs to gh-pages branch
                 command: yarn deploy:docs
 
+  deploy-web:
+    executor: node/default
+    steps:
+      - checkout
+      - node/with-cache:
+          steps:
+            - run:
+                name: Authenticate with registry
+                command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/project/.npmrc
+            - run:
+                name: Publish package
+                command: npm publish --access public
+
 workflows:
   build-deploy:
     jobs:
@@ -72,6 +85,15 @@ workflows:
           requires:
             - build-docs
           filters:
+            tags:
+              only: /^v.*/
             branches:
-              only:
-                - master
+              ignore: /.*/
+      - deploy-web:
+          requires:
+            - build-setup
+          filters:
+            tags:
+              only: /^v.*/
+            branches:
+              ignore: /.*/

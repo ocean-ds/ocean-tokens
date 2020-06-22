@@ -3,7 +3,7 @@
   "version": "1.0.0-alpha",
   "private": false,
   "description": "A design tokens project",
-  "main": "dist/index.js",
+  "main": "dist/tokens.module.js",
   "files": [
     "dist",
     "README.md"
@@ -33,7 +33,7 @@
   },
   "homepage": "https://pagnet.github.io/design-tokens/",
   "devDependencies": {
-    "gh-pages": "^3.0.0",
+    "gh-pages": "^3.1.0",
     "gulp": "^4.0.2",
     "gulp-dom": "^1.0.0",
     "gulp-load-plugins": "^2.0.3",
