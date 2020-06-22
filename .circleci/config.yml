@@ -26,7 +26,7 @@ jobs:
             - run:
                 name: Build design tokens for web
                 command: yarn build:web
-            - persist_to_worspace:
+            - persist_to_workspace:
                 root: ~/
                 path:
                   - build/*
