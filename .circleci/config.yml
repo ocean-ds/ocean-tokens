@@ -66,7 +66,7 @@ jobs:
           steps:
             - run:
                 name: Authenticate with registry
-                command: echo "//registry.npmjs.org/:_authToken=$npm_TOKEN" > ~/project/.npmrc
+                command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/project/.npmrc
             - run:
                 name: Publish package
                 command: npm publish --access public
@@ -85,9 +85,10 @@ workflows:
           requires:
             - build-docs
           filters:
+            tags:
+              only: /^v.*/
             branches:
-              only:
-                - master
+              ignore: /.*/
       - deploy-web:
           requires:
             - build-setup
