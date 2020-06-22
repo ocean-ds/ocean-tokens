@@ -1,6 +1,6 @@
 {
   "name": "@useblu/tokens",
-  "version": "1.0.0-alpha",
+  "version": "0.0.0-controlled-by-tags",
   "private": false,
   "description": "A design tokens project",
   "main": "dist/tokens.module.js",

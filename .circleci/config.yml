@@ -69,7 +69,9 @@ jobs:
                 command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/project/.npmrc
             - run:
                 name: Publish package
-                command: npm publish --access public
+                command: |
+                  export VERSION_TAG=$(echo $CIRCLE_TAG | awk '{print substr($1,2); }')
+                  yarn publish --access public --new-version $VERSION_TAG
 
 workflows:
   version: 2
