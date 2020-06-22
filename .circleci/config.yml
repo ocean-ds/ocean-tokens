@@ -28,7 +28,7 @@ jobs:
                 command: yarn build:web
             - persist_to_workspace:
                 root: ~/
-                path:
+                paths:
                   - build/*
 
   build-docs:
