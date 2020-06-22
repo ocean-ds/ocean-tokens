@@ -75,13 +75,22 @@ workflows:
   version: 2
   build-deploy:
     jobs:
-      - build-setup
+      - build-setup:
+          filters:
+            tags:
+              only: /.*/
       - build-web:
           requires:
             - build-setup
+          filters:
+            tags:
+              only: /.*/
       - build-docs:
           requires:
             - build-setup
+          filters:
+            tags:
+              only: /.*/
       - deploy-docs:
           requires:
             - build-docs
