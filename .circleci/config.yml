@@ -28,7 +28,7 @@ jobs:
                 command: yarn build:web
             - persist_to_workspace:
                 root: ~/
-                paths: project/dist
+                paths: dist
 
   build-docs:
     executor: node/default
