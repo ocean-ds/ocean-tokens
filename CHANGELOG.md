@@ -5,6 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## 1.0.0 (June 23, 2020)
+
+### First stable release :rocket:
+
+- Tokens remodeled and separated by categories, follow the [document](https://pagnet.github.io/design-tokens/)
+- Design tokens avaliable in:
+  - @useblu/tokens (npm)
+
 ## 0.1.0 (September 29, 2019)
 
 ### First tokens :tada::clap:
