@@ -19,15 +19,36 @@ Tokens are available by plaftorm for download as packages in the [github release
 ### Javascript
 
 ```js
-import { createGlobalStyle } from 'styled-components';
+import styled from 'styled-components';
+import {
+  fontFamilyHighlight,
+  fontSizeLg,
+  fontWeightExtrabold,
+  lineHeightMedium,
+  colorInterfaceLightPure
+} from '@useblu/tokens';
 
-// TODO
+export const Heading1 = styled.h1`
+  font-family: ${fontFamilyHighlight};
+  font-size: ${fontSizeLg};
+  font-weight: ${fontWeightExtrabold};
+  line-height: ${lineHeightMedium};
+  color: ${colorInterfaceLightPure};
+`;
 ```
 
 ### Sass
 
 ```scss
-// TODO
+@import '~@useblu/tokens/dist/tokens.scss';
+
+.h1 {
+  font-family: $font-family-highlight;
+  font-size: $font-size-lg;
+  font-weight: $font-weight-extrabold;
+  line-height: $line-height-medium;
+  color: $color-interface-light-pure;
+}
 ```
 
 ## Contributing
