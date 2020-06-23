@@ -10,8 +10,6 @@ This is an internal project at Blu Pagamentos powered by [Theo](https://github.c
 
 ### Download and Install Manually
 
-> For now, this is the only option available. In the future we'll publish in some package manager.
-
 Tokens are available by plaftorm for download as packages in the [github releases page](https://github.com/Pagnet/design-tokens/releases).
 
 ## Usage
@@ -19,22 +17,43 @@ Tokens are available by plaftorm for download as packages in the [github release
 ### Javascript
 
 ```js
-import { createGlobalStyle } from 'styled-components';
+import styled from 'styled-components';
+import {
+  fontFamilyHighlight,
+  fontSizeLg,
+  fontWeightExtrabold,
+  lineHeightMedium,
+  colorInterfaceLightPure,
+} from '@useblu/tokens';
 
-// TODO
+export const Heading1 = styled.h1`
+  font-family: ${fontFamilyHighlight};
+  font-size: ${fontSizeLg};
+  font-weight: ${fontWeightExtrabold};
+  line-height: ${lineHeightMedium};
+  color: ${colorInterfaceLightPure};
+`;
 ```
 
 ### Sass
 
 ```scss
-// TODO
+@import '~@useblu/tokens/dist/tokens.scss';
+
+.h1 {
+  font-family: $font-family-highlight;
+  font-size: $font-size-lg;
+  font-weight: $font-weight-extrabold;
+  line-height: $line-height-medium;
+  color: $color-interface-light-pure;
+}
 ```
 
 ## Contributing
 
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change or send us a message on our [Slack Channel](https://useblu.slack.com/messages/CKTBW3170).
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-Please make sure to use the english language everywhere ;)
+Please make sure to use english everywhere ;)
 
 ### Code of conduct
 
@@ -45,60 +64,6 @@ please follow it in all your interactions with the project.
 
 Read the [contributing guide](https://github.com/Pagnet/design-tokens/blob/master/CONTRIBUTING.md)
 to learn how to propose changes and understand our development process.
-
-<details>
-  <summary><strong>Pending features</strong> (click to expand)</summary>
-
-##### Technical
-
-- [x] Initial configuration to export the tokens on the platforms: Android, iOS and Web
-- [ ] Configure the build process to generate the documentation for the tokens
-- [ ] Add license
-- [ ] Publish tokens on packages manager
-- [x] Add contribution guide (Issue template, PR template)
-- [ ] Host the versied documentation of the tokens
-- [ ] Configure CI/CD (With Github Actions and Github Packages)
-
-##### Non-technical
-
-- [ ] Establish a roadmap of tokens (options first, decisions next)
-  - _See [High-LevelTokenHierarchy](docs/High-LevelTokenHierarchy) file for any inspiration_
-
-</details>
-
-### Development setup
-
-<details>
-  <summary><strong>Requirements</strong> (click to expand)</summary>
-
-- [Git](https://git-scm.com/) at `v2.21.0+`
-- [Node.js](http://nodejs.org) at `v12.0.0+`
-  - _We recommend using [NVM](https://github.com/nvm-sh/nvm)_
-- [VS Code](https://code.visualstudio.com/) or other modern editor
-  - _In VS Code these plugins makes the experience better: [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode), [Bracket Pair Colorizer](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer), [vscode-icons](https://marketplace.visualstudio.com/items?itemName=vscode-icons-team.vscode-icons) and [GitLen](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)_
-
-</details>
-
-Open your terminal and execute the following commands one by one to get started.
-
-```
-git clone git@github.com:Pagnet/design-tokens.git
-cd design-tokens/
-npm install
-code .
-```
-
-#### Project Structure
-
-```
-TODO: Explain the structure
-```
-
-### Build Process
-
-- Create or change some token definition
-- Execute `npm run web` or `npm run android` in your terminal
-- If no error occurred in the process will see your tokens in the `dist` folder
 
 ## Versioning
 
