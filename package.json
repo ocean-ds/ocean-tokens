@@ -10,9 +10,9 @@
   ],
   "scripts": {
     "clean": "rimraf dist",
-    "preandroid": "node scripts/android/pre-script.js",
+    "prebuild:android": "node formats/android/pre-script.js",
     "build:web": "theo src/tokens.yml --transform web --format scss,module.js,json --dest dist",
-    "build:android": "theo src/tokens.yml --setup scripts/android/android-formats.js --transform android --format blu.android.xml --dest dist --resolveMetaAliases",
+    "build:android": "theo src/tokens.yml --setup formats/android/android-formats.js --transform android --format blu.android.xml --dest dist --resolveMetaAliases",
     "build:docs": "gulp docs --gulpfile scripts/gulpfile.js",
     "deploy:docs": "gh-pages -d dist/docs"
   },
