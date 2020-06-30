@@ -34,5 +34,5 @@ module.exports = theo => {
   	);
 
     //theo.registerTransform("ios", ['color/rgb','ios-remove-rgb-word','ios-remove-pixel']);
-    theo.registerTransform("ios", ['ios-rgba-swift','ios-remove-pixel']);
+    theo.registerTransform("ios", ['ios-remove-pixel']);
   }
