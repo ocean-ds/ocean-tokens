@@ -1,0 +1,6 @@
+# List of all token files
+# Useful for documentation generation
+imports:
+  - ./shadow/index.yml
+global:
+  category: tokens
