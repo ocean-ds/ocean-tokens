@@ -14,25 +14,41 @@ function hexToRGB(hex, alpha) {
     }
 }
 
+function convertToShadowSwift(str) {
+  
+  str = str.replace("rgba(","").replace(")","");
+  var res = str.split(" ");
+  var prefix = ['x:',', y:',', blurRadius:',', color: UIColor(red:',' green:',' blue:',' alpha:']; 
+  var text = "";
+  for (i = 0; i < res.length; i++) {
+     text += prefix[i] + " " + res[i];
+     
+  }
+  text = "createShadow(" + text + "))";
+  return text;
+  
+}
+
 module.exports = theo => {
 
 	theo.registerValueTransform(
     	'ios-rgba-swift',
     	(prop) =>
-      		prop.get('type') === 'color',
+      		prop.get('type') === 'shadow',
     	(prop) => {
-    		return hexToRGB(`${prop.get('value')}`);
+        let valueShadow = prop.get('value')
+    		return convertToShadowSwift(`${valueShadow}`);
     	}
   	);
 
   	theo.registerValueTransform(
     	'ios-remove-pixel',
-    	(prop) => prop.get('type') === 'unit' ||  prop.get('type') === 'number' ||  prop.get('type') === 'size',
+    	(prop) => prop.get('type') === 'unit' ||  prop.get('type') === 'number' ||  prop.get('type') === 'size' ||  prop.get('type') === 'shadow',
     	(prop) => {
       		return theoReplaceAll(`${prop.get('value')}`, 'px', '');
     	}
   	);
 
     //theo.registerTransform("ios", ['color/rgb','ios-remove-rgb-word','ios-remove-pixel']);
-    theo.registerTransform("ios", ['ios-remove-pixel']);
+    theo.registerTransform("ios", ['ios-rgba-swift','ios-remove-pixel']);
   }
