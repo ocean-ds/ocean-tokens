@@ -11,9 +11,15 @@
   "scripts": {
     "clean": "rimraf dist",
     "prebuild:android": "node formats/android/pre-script.js",
+    "prebuild:ios": "node formats/ios/pre-script.js",
+    "prebuild:ios-typography": "node formats/ios/pre-script.js",
+    "prebuild:ios-sizes": "node formats/ios/pre-script.js",
     "build:web": "theo src/tokens.yml --transform web --format scss,module.js,json --dest dist",
     "build:android": "theo src/mobile-tokens.yml --setup formats/android/android-formats.js --transform android --format blu.android.xml --dest dist --resolveMetaAliases",
-    "build:ios": "theo src/mobile-tokens.yml --setup formats/ios/ios-formats.js --transform ios --format ios.json --dest dist --resolveMetaAliases",
+    "build:ios-color": "theo src/mobile-ios-color-tokens.yml --setup formats/ios/ios-formats.js --transform ios --format blu.ios.json --dest dist/ios --resolveMetaAliases",
+    "build:ios-typography": "theo src/mobile-ios-typography-tokens.yml --setup formats/ios/ios-formats.js --transform ios --format blu.ios.json --dest dist/ios --resolveMetaAliases",
+    "build:ios-size": "theo src/mobile-ios-size-tokens.yml --setup formats/ios/ios-formats.js --transform ios --format blu.ios.json --dest dist/ios --resolveMetaAliases",
+    "build:ios": "theo src/mobile-tokens.yml --setup formats/ios/ios-formats.js --transform ios --format blu.ios.json --dest dist/ios --resolveMetaAliases",
     "build:docs": "gulp docs --gulpfile scripts/gulpfile.js",
     "deploy:docs": "gh-pages -d dist/docs"
   },
