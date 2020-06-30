@@ -31,10 +31,28 @@ module.exports = def => {
       if (isNaN(v)) 
       	v = JSON.stringify(v);
       
-		
-      
+      var isFontWeight = k.search("fontWeight");
+      var isFontFamily = k.search("fontFamily");
+      if (isFontWeight == -1 && isFontFamily == -1) { 
+        result = result.push(`  "${k}": ${v},`);
+      }
+      if (prop.get("category") == "font-family") {
+        let weightKeys = ["WeightLight","WeightRegular","WeightMedium","WeightBold","WeightExtrabold"];
+        let fontFamilyBaseWeightValues = ["Light","Regular","Semibold","Bold","Extrabold"];
+        let fontFamilyHighlightWeightValues = ["Light","Roman","Medium","Heavy","Black"];
+        for (var i = weightKeys.length - 1; i >= 0; i--) {
+          let keyWeight = k + weightKeys[i];
+          
+          if (k == "fontFamilyBase") {
+            let fontFamilyWithWeight = prop.get("value").replace(/\s/g, '')+"-"+fontFamilyBaseWeightValues[i]
+            result = result.push(`  "${keyWeight}": "${fontFamilyWithWeight}",`);
+          } else {
+            let fontFamilyWithWeight = prop.get("value").replace(/\s/g, '')+"-"+fontFamilyHighlightWeightValues[i]
+            result = result.push(`  "${keyWeight}": "${fontFamilyWithWeight}",`);
+          }
+        }
+      }
 
-      result = result.push(`  "${k}": ${v},`);
       return result;
     })
     .flatten(1)
