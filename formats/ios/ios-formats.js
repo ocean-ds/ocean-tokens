@@ -2,42 +2,31 @@ function theoReplaceAll(str, find, replace) {
   return str.replace(new RegExp(find, 'g'), replace);
 }
 
-function hexToRGB(hex, alpha) {
-    var r = parseInt(hex.slice(1, 3), 16),
-        g = parseInt(hex.slice(3, 5), 16),
-        b = parseInt(hex.slice(5, 7), 16);
-
-    if (alpha) {
-        return "UIColor(red: " + r + ", green: " + g + ", blue: " + b + ", alpha: " + alpha + ")";
-    } else {
-        return "UIColor(red: " + r + ", green: " + g + ", blue: " + b + ", alpha: 1)";
-    }
-}
-
-function convertToShadowSwift(str) {
-  
+function convertToMap(str) {
   str = str.replace("rgba(","").replace(")","");
   var res = str.split(" ");
-  var prefix = ['x:',', y:',', blurRadius:',', color: UIColor(red:',' green:',' blue:',' alpha:']; 
+  var prefix = ['"x":',', "y":',', "radius":',', "color": #colorLiteral(red:',' green:',' blue:',' alpha:']; 
   var text = "";
   for (i = 0; i < res.length; i++) {
      text += prefix[i] + " " + res[i];
-     
   }
-  text = "createShadow(" + text + "))";
-  return text;
-  
+  text = text.replace(", green:", " / 255, green:");
+  text = text.replace(", blue:", " / 255, blue:");
+  text = text.replace(", alpha:", " / 255, alpha:");
+  text = text + ")";
+  text = "[" + text + "]";
+  return   text;
 }
 
 module.exports = theo => {
 
 	theo.registerValueTransform(
-    	'ios-rgba-swift',
+    	'ios-convert-to-map',
     	(prop) =>
       		prop.get('type') === 'shadow',
     	(prop) => {
         let valueShadow = prop.get('value')
-    		return convertToShadowSwift(`${valueShadow}`);
+    		return convertToMap(`${valueShadow}`);
     	}
   	);
 
@@ -50,5 +39,5 @@ module.exports = theo => {
   	);
 
     //theo.registerTransform("ios", ['color/rgb','ios-remove-rgb-word','ios-remove-pixel']);
-    theo.registerTransform("ios", ['ios-rgba-swift','ios-remove-pixel']);
+    theo.registerTransform("ios", ['ios-convert-to-map','ios-remove-pixel']);
   }
