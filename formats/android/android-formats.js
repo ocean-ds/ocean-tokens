@@ -23,6 +23,14 @@ module.exports = (theo) => {
   );
 
   theo.registerValueTransform(
+    'android-spacing-dp',
+    (prop) => prop.get('type') === 'unit' && prop.get('category') === 'spacing',
+    (prop) => {
+      return theoReplaceAll(`${prop.get('value')}`, 'px', '') + 'dp';
+    }
+  );
+
+  theo.registerValueTransform(
     'android-radius-dp',
     (prop) => prop.get('type') === 'unit' && prop.get('category') === 'radius',
     (prop) => {
@@ -33,6 +41,7 @@ module.exports = (theo) => {
   theo.registerTransform('android', [
     'android-font-size-sp',
     'android-border-width-dp',
+    'android-spacing-dp',
     'android-radius-dp',
   ]);
 };
