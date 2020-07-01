@@ -15,7 +15,6 @@
     "build:web": "theo src/tokens.yml --transform web --format scss,module.js,json --dest dist",
     "build:android": "theo src/mobile-tokens.yml --setup formats/android/android-formats.js --transform android --format blu.android.xml --dest dist --resolveMetaAliases",
     "build:ios": "sh generate_ios_tokens.sh",
-    "build:ios-raw": "theo src/mobile-tokens.yml --setup formats/ios/ios-formats.js --transform ios --format ios.json --dest dist/ios",
     "build:docs": "gulp docs --gulpfile scripts/gulpfile.js",
     "deploy:docs": "gh-pages -d dist/docs"
   },
