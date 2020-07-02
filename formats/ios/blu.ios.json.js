@@ -37,8 +37,8 @@ module.exports = def => {
         result = result.push(`  "${k}": ${v},`);
       }
       if (prop.get("category") == "font-family") {
-        let weightKeys = ["WeightLight","WeightRegular","WeightMedium","WeightBold","WeightExtrabold"];
-        let fontFamilyBaseWeightValues = ["Light","Regular","Semibold","Bold","Extrabold"];
+        let weightKeys = ["WeightLight","WeightRegular","WeightMedium","WeightBold","WeightExtraBold"];
+        let fontFamilyBaseWeightValues = ["Light","Regular","SemiBold","Bold","ExtraBold"];
         let fontFamilyHighlightWeightValues = ["Light","Roman","Medium","Heavy","Black"];
         for (var i = weightKeys.length - 1; i >= 0; i--) {
           let keyWeight = k + weightKeys[i];
