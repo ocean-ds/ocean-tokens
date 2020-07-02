@@ -4,5 +4,4 @@ echo "Generate tokens ios"
 theo src/mobile-ios-color-tokens.yml --setup formats/ios/ios-formats.js --transform ios --format blu.ios.json --dest dist/ios --resolveMetaAliases &&
 theo src/mobile-ios-typography-tokens.yml --setup formats/ios/ios-formats.js --transform ios --format blu.ios.json --dest dist/ios --resolveMetaAliases &&
 theo src/mobile-ios-size-tokens.yml --setup formats/ios/ios-formats.js --transform ios --format blu.ios.json --dest dist/ios --resolveMetaAliases &&
-theo src/mobile-ios-shadow-tokens.yml --setup formats/ios/ios-formats.js --transform ios --format blu.ios.json --dest dist/ios --resolveMetaAliases &&
-theo src/mobile-tokens.yml --setup formats/ios/ios-formats.js --transform ios --format blu.ios.json --dest dist/ios --resolveMetaAliases
+theo src/mobile-ios-shadow-tokens.yml --setup formats/ios/ios-formats.js --transform ios --format blu.ios.json --dest dist/ios --resolveMetaAliases
