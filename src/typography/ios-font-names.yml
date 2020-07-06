@@ -1,0 +1,8 @@
+---
+global:
+  type: typography
+  category: all
+
+imports:
+  - ./font-family.yml
+  - ./font-weight.yml

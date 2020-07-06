@@ -7,3 +7,8 @@ fs.copyFile(source, target, (err) => {
   if (err) throw err;
   console.log(`${source} was copied to ${target}`);
 });
+
+fs.copyFile(source, target, (err) => {
+  if (err) throw err;
+  console.log(`${source} was copied to ${target}`);
+});
