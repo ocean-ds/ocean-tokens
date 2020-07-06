@@ -3,14 +3,25 @@
 
 const _ = require('lodash');
 const xml = require('xml');
+var fs = require('fs');
+
+function loadDiscardedCategories() {
+  return ['font-weight', 'font-family'];
+}
 
 module.exports = (def) => {
+  const discardedCategories = loadDiscardedCategories();
+
   const o = {
     resources: def
       .get('props')
+      .filter((prop) => {
+        return !discardedCategories.includes(prop.get('category'));
+      })
       .map((prop) => {
         const key = (() => {
-          switch (prop.get('type')) {
+          const newLocal = prop.get('type');
+          switch (newLocal) {
             case 'color':
               return 'color';
             case 'size':
