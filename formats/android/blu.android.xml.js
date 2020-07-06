@@ -6,7 +6,10 @@ const xml = require('xml');
 var fs = require('fs');
 
 function loadDiscardedCategories() {
-  return ['font-weight', 'font-family'];
+  return fs.readFileSync(
+    'node_modules/theo/lib/formats/blu.android.discarded.categories.json',
+    'utf8'
+  );
 }
 
 module.exports = (def) => {
