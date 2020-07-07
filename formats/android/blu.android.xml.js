@@ -42,7 +42,7 @@ module.exports = (def) => {
           [key]: [
             {
               _attr: {
-                name: _.toLower(prop.get('name')).replace(/[-]/g, '_'),
+                name: _.toLower(`ocean_${prop.get('name')}`).replace(/[-]/g, '_'),
                 category: prop.get('category'),
               },
             },
