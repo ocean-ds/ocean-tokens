@@ -1,1 +1,7 @@
-["font-weight", "font-family"]
+[
+  "font-weight",
+  "font-family",
+  "box-shadow",
+  "opacity",
+  "ocean_border_radius_circular"
+]
