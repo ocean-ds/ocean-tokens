@@ -10,10 +10,6 @@ function convertToMap(str) {
   for (i = 0; i < res.length; i++) {
      text += prefix[i] + " " + res[i];
   }
-  // text = text.replace(", green:", " / 255, green:");
-  // text = text.replace(", blue:", " / 255, blue:");
-  // text = text.replace(", alpha:", " / 255, alpha:");
-  //text = text + "]";
   text = "[" + text + "]";
   return   text;
 }
