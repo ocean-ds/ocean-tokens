@@ -10,14 +10,11 @@
   ],
   "scripts": {
     "clean": "rimraf dist",
-    "prebuild:android": "node formats/android/pre-script.js",
-    "prebuild:ios": "node formats/ios/pre-script.js",
-    "build:web": "theo src/tokens.yml --transform web --format scss,module.js,json --dest dist",
-    "build:android": "theo src/mobile-tokens.yml --setup formats/android/android-formats.js --transform android --format blu.android.xml --dest dist --resolveMetaAliases",
+    "build:web": "theo src/tokens.yml --transform web --format scss,module.js --dest dist/web",
+    "build:android": "theo src/mobile-tokens.yml --setup scripts/build/android/setup.js --transform android --format xml --dest dist/android --resolveMetaAliases",
     "build:ios": "sh generate_ios_tokens.sh",
     "build:docs": "gulp docs --gulpfile scripts/gulpfile.js",
-    "deploy:docs": "gh-pages -d dist/docs",
-    "build:android2": "theo src/mobile-tokens.yml --setup setup/android.js --transform android --format blu.android.xml --dest dist --resolveMetaAliases"
+    "deploy:docs": "gh-pages -d dist/docs"
   },
   "husky": {
     "hooks": {

@@ -1,20 +1,9 @@
-// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
-// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
-
 const _ = require('lodash');
 const xml = require('xml');
-var fs = require('fs');
 
-function loadDiscardedCategories() {
-  return fs.readFileSync(
-    'node_modules/theo/lib/formats/blu.android.discarded.categories.json',
-    'utf8'
-  );
-}
+const discardedCategories = ['font-weight', 'font-family'];
 
 module.exports = (def) => {
-  const discardedCategories = loadDiscardedCategories();
-
   const o = {
     resources: def
       .get('props')
@@ -52,6 +41,7 @@ module.exports = (def) => {
       })
       .toJS(),
   };
+
   return xml(o, {
     indent: '  ',
     declaration: true,
