@@ -16,7 +16,8 @@
     "build:android": "theo src/mobile-tokens.yml --setup formats/android/android-formats.js --transform android --format blu.android.xml --dest dist --resolveMetaAliases",
     "build:ios": "sh generate_ios_tokens.sh",
     "build:docs": "gulp docs --gulpfile scripts/gulpfile.js",
-    "deploy:docs": "gh-pages -d dist/docs"
+    "deploy:docs": "gh-pages -d dist/docs",
+    "build:android2": "theo src/mobile-tokens.yml --setup setup/android.js --transform android --format blu.android.xml --dest dist --resolveMetaAliases"
   },
   "husky": {
     "hooks": {
@@ -42,6 +43,7 @@
     "gulp-rename": "^2.0.0",
     "gulp-theo": "^2.0.1",
     "husky": "^4.2.0",
+    "lodash": "^4.17.15",
     "optimist": "^0.6.1",
     "prettier": "2.0.5",
     "pretty-quick": "^2.0.1",
