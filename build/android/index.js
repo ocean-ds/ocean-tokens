@@ -2,12 +2,14 @@ const gulp = require('gulp');
 const theo = require('theo');
 const gulpLoadPlugins = require('gulp-load-plugins');
 
+const mobileGlobs = require('../utils/mobileGlobs');
+const gulpLoadFiles = require('../utils/gulpLoadFiles');
+
 require('./setupTheo')(theo);
 const $ = gulpLoadPlugins();
 
 exports.build = () =>
-  gulp
-    .src(['src/mobile-tokens.yml'])
+  gulpLoadFiles(mobileGlobs)
     .pipe(
       $.theo({
         transform: { type: 'android' },

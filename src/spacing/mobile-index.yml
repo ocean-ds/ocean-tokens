@@ -1,9 +1,0 @@
----
-global:
-  type: spacing
-  category: all
-
-imports:
-  - ./inline.yml
-  - ./inset.yml
-  - ./stack.yml

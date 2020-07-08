@@ -2,13 +2,15 @@ const gulp = require('gulp');
 const theo = require('theo');
 const gulpLoadPlugins = require('gulp-load-plugins');
 
+const gulpLoadFiles = require('../utils/gulpLoadFiles');
+const mobileGlobs = require('../utils/mobileGlobs');
+
 require('./setupTheo')(theo);
 const $ = gulpLoadPlugins();
 
-const buildCreator = (rootPath, output) =>
+const buildCreator = (globs, output) =>
   function buildSpecForIOS() {
-    return gulp
-      .src(rootPath)
+    return gulpLoadFiles(globs)
       .pipe(
         $.theo({
           transform: { type: 'ios' },
@@ -22,18 +24,21 @@ const buildCreator = (rootPath, output) =>
 exports.build = gulp.parallel(
   buildCreator('src/color/index.yml', 'tokens-color.json'),
   buildCreator('src/typography/index.yml', 'tokens-typography.json'),
-  // https://github.com/gulpjs/gulp/blob/master/docs/recipes/using-multiple-sources-in-one-task.md
-  // buildCreator(
-  //   [
-  //     'src/border/index.yml',
-  //     'src/opacity/index.yml',
-  //     'src/radius/index.yml',
-  //     'src/spacing/mobile-index.yml',
-  //   ],
-  //   'tokens-size.json'
-  // ),
-  buildCreator('src/mobile-ios-size-tokens.yml', 'tokens-size.json'),
+  buildCreator(
+    [
+      'src/border/index.yml',
+      'src/opacity/index.yml',
+      'src/radius/index.yml',
+      'src/spacing/inline.yml',
+      'src/spacing/inset.yml',
+      'src/spacing/stack.yml',
+    ],
+    'tokens-size.json'
+  ),
   buildCreator('src/shadow/index.yml', 'tokens-shadow.json'),
-  buildCreator('src/typography/ios-font-names.yml', 'tokens-fontNames.json'),
-  buildCreator('src/mobile-tokens.yml', 'tokens.json')
+  buildCreator(
+    ['src/typography/font-family.yml', 'src/typography/font-weight.yml'],
+    'tokens-fontNames.json'
+  ),
+  buildCreator(mobileGlobs, 'tokens.json')
 );

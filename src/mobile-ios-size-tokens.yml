@@ -1,9 +1,0 @@
-# List of all token files
-# Useful for documentation generation
-imports:
-  - ./border/index.yml
-  - ./opacity/index.yml
-  - ./radius/index.yml
-  - ./spacing/mobile-index.yml
-global:
-  category: tokens

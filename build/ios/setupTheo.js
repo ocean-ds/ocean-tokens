@@ -1,4 +1,4 @@
-const theoReplaceAll = require('../common/theoReplaceAll');
+const theoReplaceAll = require('../utils/theoReplaceAll');
 
 function convertToMap(str) {
   str = str.replace('rgba(', '').replace(')', '');
