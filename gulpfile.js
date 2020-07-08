@@ -7,6 +7,9 @@ const android = require('./build/android');
 const ios = require('./build/ios');
 
 gulp.task('clean:dist', () => del('dist/**', { force: true }));
+gulp.task('copy:assets', () =>
+  gulp.src('assets/**/*').pipe(gulp.dest('dist/assets'))
+);
 
 gulp.task('build:site', site.build);
 gulp.task('build:web', web.build);
@@ -17,7 +20,7 @@ gulp.task(
   'build:lib',
   gulp.series(
     'clean:dist',
-    gulp.parallel('build:web', 'build:android', 'build:ios')
+    gulp.parallel('copy:assets', 'build:web', 'build:android', 'build:ios')
   )
 );
 

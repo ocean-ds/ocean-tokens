@@ -1,117 +1,84 @@
 version: 2.1
 
 orbs:
-  node: circleci/node@1.1.6
+  node: circleci/node@3.0.0
 
 jobs:
-  build-setup:
+  build:
     executor: node/default
     steps:
       - checkout
-      - node/with-cache:
-          steps:
-            - run:
-                name: Install Yarn package manager
-                command: curl -o- -L https://yarnpkg.com/install.sh | bash
-            - run:
-                name: Install javascript dependencies (using Yarn)
-                command: yarn install --ignore-engines
+      - node/install-packages:
+          pkg-manager: yarn
+      - run:
+          name: Build library
+          command: yarn gulp build:lib
+      - run:
+          name: Build gh-pages
+          command: yarn gulp build:site
+      - persist_to_workspace:
+          root: ~/project
+          paths:
+            - dist
 
-  build-web:
+  deploy-pkg:
     executor: node/default
     steps:
       - checkout
-      - node/with-cache:
-          steps:
-            - run:
-                name: Build design tokens for web
-                command: yarn build:web
+      - attach_workspace:
+          at: ~/project
+      - restore_cache:
+          keys:
+            - node-deps-v1-{{ .Environment.CIRCLE_BRANCH }}-{{ checksum "yarn.lock" }}
+      - run:
+          name: Authenticate with registry
+          command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/project/.npmrc
+      - run:
+          name: Bump package version by tag
+          command: |
+            export VERSION_TAG=$(echo $CIRCLE_TAG | awk '{print substr($1,2); }')
+            yarn version --new-version $VERSION_TAG --no-git-tag-version --no-commit-hooks
+      - run:
+          name: Publish package
+          command: yarn publish --access public
 
-  build-docs:
+  deploy-site:
     executor: node/default
     steps:
       - checkout
-      - node/with-cache:
-          steps:
-            - run:
-                name: Build design tokens for docs
-                command: yarn build:docs
-            - persist_to_workspace:
-                root: dist
-                paths:
-                  - docs
-
-  deploy-docs:
-    executor: node/default
-    steps:
-      - checkout
-      - node/with-cache:
-          steps:
-            - attach_workspace:
-                at: dist
-            - run:
-                name: Configure commit account
-                command: |
-                  git config user.email "ops@useblu.com.br"
-                  git config user.name "Blu"
-            - run:
-                name: Deploy docs to gh-pages branch
-                command: yarn deploy:docs
-
-  deploy-web:
-    executor: node/default
-    steps:
-      - checkout
-      - node/with-cache:
-          steps:
-            - run:
-                name: Authenticate with registry
-                command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/project/.npmrc
-            - run:
-                name: Build design tokens for web
-                command: yarn build:web
-            - run:
-                name: Bump package version by tag
-                command: |
-                  export VERSION_TAG=$(echo $CIRCLE_TAG | awk '{print substr($1,2); }')
-                  yarn version --new-version $VERSION_TAG --no-git-tag-version --no-commit-hooks
-            - run:
-                name: Publish package
-                command: yarn publish --access public
+      - attach_workspace:
+          at: ~/project
+      - run:
+          name: Configure commit account
+          command: |
+            git config user.email "ops@useblu.com.br"
+            git config user.name "Blu"
+      - run:
+          name: Deploy static to gh-pages branch
+          command: yarn deploy:site
 
 workflows:
   version: 2
   build-deploy:
     jobs:
-      - build-setup:
+      - build:
           filters:
             tags:
-              only: /.*/
-      - build-web:
+              only: /^v.*/
+            branches:
+              ignore:
+                - gh-pages
+      - deploy-pkg:
           requires:
-            - build-setup
-          filters:
-            tags:
-              only: /.*/
-      - build-docs:
-          requires:
-            - build-setup
-          filters:
-            tags:
-              only: /.*/
-      - deploy-docs:
-          requires:
-            - build-docs
+            - build
           filters:
             tags:
               only: /^v.*/
             branches:
               ignore: /.*/
-      - deploy-web:
+      - deploy-site:
           requires:
-            - build-web
+            - deploy-pkg
           filters:
             tags:
               only: /^v.*/
-            branches:
-              ignore: /.*/
