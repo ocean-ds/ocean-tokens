@@ -20,13 +20,10 @@ const buildCreator = (rootPath, output) =>
   };
 
 exports.build = gulp.parallel(
-  buildCreator('src/mobile-ios-color-tokens.yml', 'tokens-color.json'),
-  buildCreator(
-    'src/mobile-ios-typography-tokens.yml',
-    'tokens-typography.json'
-  ),
+  buildCreator('src/color/index.yml', 'tokens-color.json'),
+  buildCreator('src/typography/index.yml', 'tokens-typography.json'),
   buildCreator('src/mobile-ios-size-tokens.yml', 'tokens-size.json'),
-  buildCreator('src/mobile-ios-shadow-tokens.yml', 'tokens-shadow.json'),
-  buildCreator('src/mobile-ios-font-name-tokens.yml', 'tokens-fontNames.json'),
+  buildCreator('src/shadow/index.yml', 'tokens-shadow.json'),
+  buildCreator('src/typography/ios-font-names.yml', 'tokens-fontNames.json'),
   buildCreator('src/mobile-tokens.yml', 'tokens.json')
 );
