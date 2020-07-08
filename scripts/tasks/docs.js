@@ -3,12 +3,11 @@ const dom = require('gulp-dom');
 const path = require('path');
 
 const gulpLoadPlugins = require('gulp-load-plugins');
-
 const $ = gulpLoadPlugins();
 
-gulp.task('build-docs', () => {
+exports.build = function build() {
   return gulp
-    .src(path.join(__dirname, '../src/tokens.yml'))
+    .src(path.join(__dirname, '../../src/tokens.yml'))
     .pipe(
       $.theo({
         transform: { type: 'web' },
@@ -16,12 +15,12 @@ gulp.task('build-docs', () => {
       })
     )
     .pipe($.rename('index.html'))
-    .pipe(gulp.dest(path.join(__dirname, '../dist/docs')));
-});
+    .pipe(gulp.dest(path.join(__dirname, '../../dist/docs')));
+};
 
-gulp.task('doc-base-url', () => {
+exports.setBaseURL = function setBaseURL() {
   return gulp
-    .src(path.join(__dirname, '../dist/docs/index.html'))
+    .src(path.join(__dirname, '../../dist/docs/index.html'))
     .pipe(
       dom(function () {
         // cache/create all elements you will work with --'this' is your Document
@@ -33,7 +32,5 @@ gulp.task('doc-base-url', () => {
         return this;
       })
     )
-    .pipe(gulp.dest(path.join(__dirname, '../dist/docs')));
-});
-
-gulp.task('docs', gulp.series(['build-docs', 'doc-base-url']));
+    .pipe(gulp.dest(path.join(__dirname, '../../dist/docs')));
+};

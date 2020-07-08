@@ -3,7 +3,6 @@
   "version": "0.0.0-controlled-by-tags",
   "private": false,
   "description": "A design tokens project",
-  "main": "dist/tokens.module.js",
   "files": [
     "dist",
     "README.md"
@@ -11,9 +10,9 @@
   "scripts": {
     "clean": "rimraf dist",
     "build:web": "theo src/tokens.yml --transform web --format scss,module.js --dest dist/web",
-    "build:android": "theo src/mobile-tokens.yml --setup scripts/build/android/setup.js --transform android --format xml --dest dist/android --resolveMetaAliases",
-    "build:ios": "sh generate_ios_tokens.sh",
-    "build:docs": "gulp docs --gulpfile scripts/gulpfile.js",
+    "build:android": "gulp build:android",
+    "build:ios": "gulp build:ios",
+    "build:docs": "gulp build:docs",
     "deploy:docs": "gh-pages -d dist/docs"
   },
   "husky": {
