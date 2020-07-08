@@ -45,7 +45,7 @@ jobs:
             echo $VERSION_NUMBER
             echo $TAG_NAME
             yarn version --new-version $VERSION_NUMBER --no-git-tag-version --no-commit-hooks
-            # yarn publish --access public --tag $TAG_NAME
+            yarn publish --access public --tag $TAG_NAME
 
   deploy-site:
     executor: node/default
