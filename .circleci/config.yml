@@ -84,9 +84,9 @@ workflows:
               only: /^v.*/
             branches:
               ignore: /.*/
-      # - deploy-site:
-      #     requires:
-      #       - deploy-pkg
-      #     filters:
-      #       tags:
-      #         only: /^v.*/
+      - deploy-site:
+          requires:
+            - deploy-pkg
+          filters:
+            tags:
+              only: /^v.*/
