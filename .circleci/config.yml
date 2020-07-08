@@ -20,6 +20,7 @@ jobs:
           root: ~/project
           paths:
             - dist
+            - static
 
   deploy-pkg:
     executor: node/default
