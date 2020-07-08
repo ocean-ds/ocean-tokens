@@ -9,7 +9,7 @@
   ],
   "scripts": {
     "build": "gulp build:lib",
-    "deploy:docs": "gh-pages -d dist/docs",
+    "deploy:site": "gh-pages -d static",
     "gulp": "gulp"
   },
   "husky": {

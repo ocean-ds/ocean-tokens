@@ -4,7 +4,7 @@ const dom = require('gulp-dom');
 const gulpLoadPlugins = require('gulp-load-plugins');
 const $ = gulpLoadPlugins();
 
-gulp.task('build:docs:html', () =>
+gulp.task('build:site:html', () =>
   gulp
     .src('src/tokens.yml')
     .pipe(
@@ -14,12 +14,12 @@ gulp.task('build:docs:html', () =>
       })
     )
     .pipe($.rename('index.html'))
-    .pipe(gulp.dest('dist/docs'))
+    .pipe(gulp.dest('static'))
 );
 
-gulp.task('build:docs:set-base-url', () =>
+gulp.task('build:site:set-base-url', () =>
   gulp
-    .src('dist/docs/index.html')
+    .src('static/index.html')
     .pipe(
       dom(function () {
         const header = this.querySelector('head');
@@ -30,7 +30,7 @@ gulp.task('build:docs:set-base-url', () =>
         return this;
       })
     )
-    .pipe(gulp.dest('dist/docs'))
+    .pipe(gulp.dest('static'))
 );
 
-exports.build = gulp.series('build:docs:html', 'build:docs:set-base-url');
+exports.build = gulp.series('build:site:html', 'build:site:set-base-url');

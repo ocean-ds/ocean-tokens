@@ -3,4 +3,5 @@
 node_modules
 .cache
 dist
+static
 package-lock.json
