@@ -22,6 +22,16 @@ const buildCreator = (rootPath, output) =>
 exports.build = gulp.parallel(
   buildCreator('src/color/index.yml', 'tokens-color.json'),
   buildCreator('src/typography/index.yml', 'tokens-typography.json'),
+  // https://github.com/gulpjs/gulp/blob/master/docs/recipes/using-multiple-sources-in-one-task.md
+  // buildCreator(
+  //   [
+  //     'src/border/index.yml',
+  //     'src/opacity/index.yml',
+  //     'src/radius/index.yml',
+  //     'src/spacing/mobile-index.yml',
+  //   ],
+  //   'tokens-size.json'
+  // ),
   buildCreator('src/mobile-ios-size-tokens.yml', 'tokens-size.json'),
   buildCreator('src/shadow/index.yml', 'tokens-shadow.json'),
   buildCreator('src/typography/ios-font-names.yml', 'tokens-fontNames.json'),
