@@ -52,6 +52,9 @@ jobs:
       - checkout
       - attach_workspace:
           at: ~/project
+      - restore_cache:
+          keys:
+            - node-deps-v1-{{ .Environment.CIRCLE_BRANCH }}-{{ checksum "yarn.lock" }}
       - run:
           name: Configure commit account
           command: |
