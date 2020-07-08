@@ -36,11 +36,14 @@ jobs:
       - run:
           name: Bump package version by tag
           command: |
-            export VERSION_TAG=$(echo $CIRCLE_TAG | awk '{print substr($1,2); }')
-            yarn version --new-version $VERSION_TAG --no-git-tag-version --no-commit-hooks
+            export VERSION_NUMBER=$(echo $CIRCLE_TAG | awk '{print substr($1,2); }')
+            yarn version --new-version $VERSION_NUMBER --no-git-tag-version --no-commit-hooks
       - run:
           name: Publish package
-          command: yarn publish --access public
+          command: |
+            export TAG_NAME=$(echo $VERSION_NUMBER | grep -Po '[a-z]*')
+            [ -z "$TAG_NAME" ] && TAG_NAME="latest"
+            yarn publish --access public --tag $TAG_NAME
 
   deploy-site:
     executor: node/default
