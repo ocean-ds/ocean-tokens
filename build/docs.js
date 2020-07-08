@@ -5,9 +5,9 @@ const path = require('path');
 const gulpLoadPlugins = require('gulp-load-plugins');
 const $ = gulpLoadPlugins();
 
-exports.build = function build() {
-  return gulp
-    .src(path.join(__dirname, '../../src/tokens.yml'))
+const build = () =>
+  gulp
+    .src('src/tokens.yml')
     .pipe(
       $.theo({
         transform: { type: 'web' },
@@ -15,15 +15,13 @@ exports.build = function build() {
       })
     )
     .pipe($.rename('index.html'))
-    .pipe(gulp.dest(path.join(__dirname, '../../dist/docs')));
-};
+    .pipe(gulp.dest('dist/docs'));
 
-exports.setBaseURL = function setBaseURL() {
-  return gulp
-    .src(path.join(__dirname, '../../dist/docs/index.html'))
+const setBaseURL = () =>
+  gulp
+    .src('dist/docs/index.html')
     .pipe(
       dom(function () {
-        // cache/create all elements you will work with --'this' is your Document
         const header = this.querySelector('head');
         const base = this.createElement('base');
         base.href = 'https://pagnet.github.io/design-tokens/';
@@ -32,5 +30,6 @@ exports.setBaseURL = function setBaseURL() {
         return this;
       })
     )
-    .pipe(gulp.dest(path.join(__dirname, '../../dist/docs')));
-};
+    .pipe(gulp.dest('dist/docs'));
+
+exports.build = gulp.series(build, setBaseURL);

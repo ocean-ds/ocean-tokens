@@ -1,13 +1,12 @@
 const gulp = require('gulp');
-const path = require('path');
 const theo = require('theo');
-require('../build/ios/setup')(theo);
-
 const gulpLoadPlugins = require('gulp-load-plugins');
+
+require('./setupTheo')(theo);
 const $ = gulpLoadPlugins();
 
-function buildCreator(rootPath, output) {
-  return function build() {
+const buildCreator = (rootPath, output) =>
+  function build() {
     return gulp
       .src(rootPath)
       .pipe(
@@ -17,9 +16,8 @@ function buildCreator(rootPath, output) {
         })
       )
       .pipe($.rename(output))
-      .pipe(gulp.dest(path.join(__dirname, '../../dist/ios')));
+      .pipe(gulp.dest('dist/ios'));
   };
-}
 
 exports.build = gulp.parallel(
   buildCreator('src/mobile-ios-color-tokens.yml', 'tokens-color.json'),

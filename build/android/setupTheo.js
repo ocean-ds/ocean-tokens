@@ -1,6 +1,6 @@
 const fs = require('fs');
 const _ = require('lodash');
-const { theoReplaceAll } = require('../utils');
+const theoReplaceAll = require('../common/theoReplaceAll');
 
 module.exports = (theo) => {
   theo.registerValueTransform(

@@ -1,13 +1,12 @@
 const gulp = require('gulp');
-const path = require('path');
 const theo = require('theo');
-require('../build/android/setup')(theo);
-
 const gulpLoadPlugins = require('gulp-load-plugins');
+
+require('./setupTheo')(theo);
 const $ = gulpLoadPlugins();
 
-exports.build = function build() {
-  return gulp
+exports.build = () =>
+  gulp
     .src(['src/mobile-tokens.yml'])
     .pipe(
       $.theo({
@@ -15,5 +14,5 @@ exports.build = function build() {
         format: { type: 'xml' },
       })
     )
-    .pipe(gulp.dest(path.join(__dirname, '../../dist/android')));
-};
+    .pipe($.rename('tokens.xml'))
+    .pipe(gulp.dest('dist/android'));

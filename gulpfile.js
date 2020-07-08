@@ -1,8 +1,22 @@
 const gulp = require('gulp');
-const docs = require('./scripts/tasks/docs');
-const android = require('./scripts/tasks/android');
-const ios = require('./scripts/tasks/ios');
+const del = require('del');
 
-gulp.task('build:docs', gulp.series([docs.build, docs.setBaseURL]));
+const docs = require('./build/docs');
+const android = require('./build/android');
+const ios = require('./build/ios');
+
+gulp.task('clean:dist', function () {
+  return del('dist/**', { force: true });
+});
+
+gulp.task('build:docs', docs.build);
 gulp.task('build:android', android.build);
 gulp.task('build:ios', ios.build);
+
+gulp.task(
+  'build:all',
+  gulp.series(
+    'clean:dist',
+    gulp.parallel('build:docs', 'build:android', 'build:ios')
+  )
+);
