@@ -8,13 +8,9 @@
     "README.md"
   ],
   "scripts": {
-    "clean": "rimraf dist",
-    "build:web": "theo src/tokens.yml --transform web --format scss,module.js --dest dist/web",
-    "build:android": "gulp build:android",
-    "build:ios": "gulp build:ios",
-    "build:docs": "gulp build:docs",
-    "build:all": "gulp build:all",
-    "deploy:docs": "gh-pages -d dist/docs"
+    "build": "gulp build:lib",
+    "deploy:docs": "gh-pages -d dist/docs",
+    "gulp": "gulp"
   },
   "husky": {
     "hooks": {
@@ -45,7 +41,6 @@
     "optimist": "^0.6.1",
     "prettier": "2.0.5",
     "pretty-quick": "^2.0.1",
-    "rimraf": "^3.0.0",
     "theo": "^8.1.5"
   },
   "engines": {

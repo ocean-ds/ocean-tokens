@@ -6,7 +6,7 @@ require('./setupTheo')(theo);
 const $ = gulpLoadPlugins();
 
 const buildCreator = (rootPath, output) =>
-  function build() {
+  function buildSpecForIOS() {
     return gulp
       .src(rootPath)
       .pipe(

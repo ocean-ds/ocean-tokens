@@ -1,11 +1,10 @@
 const gulp = require('gulp');
 const dom = require('gulp-dom');
-const path = require('path');
 
 const gulpLoadPlugins = require('gulp-load-plugins');
 const $ = gulpLoadPlugins();
 
-const build = () =>
+gulp.task('build:docs:html', () =>
   gulp
     .src('src/tokens.yml')
     .pipe(
@@ -15,9 +14,10 @@ const build = () =>
       })
     )
     .pipe($.rename('index.html'))
-    .pipe(gulp.dest('dist/docs'));
+    .pipe(gulp.dest('dist/docs'))
+);
 
-const setBaseURL = () =>
+gulp.task('build:docs:set-base-url', () =>
   gulp
     .src('dist/docs/index.html')
     .pipe(
@@ -30,6 +30,7 @@ const setBaseURL = () =>
         return this;
       })
     )
-    .pipe(gulp.dest('dist/docs'));
+    .pipe(gulp.dest('dist/docs'))
+);
 
-exports.build = gulp.series(build, setBaseURL);
+exports.build = gulp.series('build:docs:html', 'build:docs:set-base-url');
