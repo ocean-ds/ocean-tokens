@@ -3,7 +3,7 @@ const $ = require('gulp-load-plugins')();
 
 gulp.task('build:web:scss', () =>
   gulp
-    .src(['src/tokens.yml'])
+    .src('src/tokens.yml')
     .pipe(
       $.theo({
         transform: { type: 'web' },
@@ -15,7 +15,7 @@ gulp.task('build:web:scss', () =>
 
 gulp.task('build:web:js', () =>
   gulp
-    .src(['src/tokens.yml'])
+    .src('src/tokens.yml')
     .pipe(
       $.theo({
         transform: { type: 'web' },
