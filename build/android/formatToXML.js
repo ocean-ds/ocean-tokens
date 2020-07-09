@@ -6,7 +6,7 @@ const discardedCategories = [
   'font-family',
   'box-shadow',
   'opacity',
-  'ocean_border_radius_circular',
+  'radius',
 ];
 
 module.exports = (def) => {
