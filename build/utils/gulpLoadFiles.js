@@ -3,6 +3,7 @@ const through = require('through2');
 const Vinyl = require('vinyl');
 const $ = require('gulp-load-plugins')();
 
+// Pipe through every specific YAML file and generate a file of imports
 module.exports = (globs) =>
   gulp
     .src(globs)
