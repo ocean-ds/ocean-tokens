@@ -1,6 +1,3 @@
 {
-  "editor.formatOnSave": true,
-  "cSpell.words": [
-    "theo"
-  ]
+  "editor.formatOnSave": true
 }
