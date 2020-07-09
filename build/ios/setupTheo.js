@@ -13,7 +13,7 @@ function convertToMap(str) {
     '"alpha":',
   ];
   var text = '';
-  for (i = 0; i < res.length; i++) {
+  for (let i = 0; i < res.length; i++) {
     text += prefix[i] + ' ' + res[i];
   }
   text = '[' + text + ']';

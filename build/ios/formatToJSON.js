@@ -1,3 +1,4 @@
+/* eslint-disable eqeqeq */
 const Immutable = require('immutable');
 const _ = require('lodash');
 
@@ -28,21 +29,21 @@ module.exports = (def) => {
         result = result.push(`  "${k}": ${v},`);
       }
       if (prop.get('category') == 'font-family') {
-        let weightKeys = [
+        const weightKeys = [
           'WeightLight',
           'WeightRegular',
           'WeightMedium',
           'WeightBold',
           'WeightExtraBold',
         ];
-        let fontFamilyBaseWeightValues = [
+        const fontFamilyBaseWeightValues = [
           'Light',
           'Regular',
           'SemiBold',
           'Bold',
           'ExtraBold',
         ];
-        let fontFamilyHighlightWeightValues = [
+        const fontFamilyHighlightWeightValues = [
           'Light',
           'Roman',
           'Medium',
@@ -50,10 +51,10 @@ module.exports = (def) => {
           'Black',
         ];
         for (var i = weightKeys.length - 1; i >= 0; i--) {
-          let keyWeight = k + weightKeys[i];
+          const keyWeight = k + weightKeys[i];
 
           if (k == 'fontFamilyBase') {
-            let fontFamilyWithWeight =
+            const fontFamilyWithWeight =
               prop.get('value').replace(/\s/g, '') +
               '-' +
               fontFamilyBaseWeightValues[i];
@@ -61,7 +62,7 @@ module.exports = (def) => {
               `  "${keyWeight}": "${fontFamilyWithWeight}",`
             );
           } else {
-            let fontFamilyWithWeight =
+            const fontFamilyWithWeight =
               prop.get('value').replace(/\s/g, '') +
               '-' +
               fontFamilyHighlightWeightValues[i];
