@@ -1,7 +1,13 @@
 const _ = require('lodash');
 const xml = require('xml');
 
-const discardedCategories = ['font-weight', 'font-family'];
+const discardedCategories = [
+  'font-weight',
+  'font-family',
+  'box-shadow',
+  'opacity',
+  'ocean_border_radius_circular',
+];
 
 module.exports = (def) => {
   const o = {
