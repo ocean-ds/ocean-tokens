@@ -24,10 +24,7 @@ module.exports = (theo) => {
   theo.registerValueTransform(
     'ios-convert-to-map',
     (prop) => prop.get('type') === 'shadow',
-    (prop) => {
-      let valueShadow = prop.get('value');
-      return convertToMap(`${valueShadow}`);
-    }
+    (prop) => convertToMap(`${prop.get('value')}`)
   );
 
   theo.registerValueTransform(

@@ -1,12 +1,10 @@
 const gulp = require('gulp');
 const theo = require('theo');
-const gulpLoadPlugins = require('gulp-load-plugins');
-
-const mobileGlobs = require('../utils/mobileGlobs');
-const gulpLoadFiles = require('../utils/gulpLoadFiles');
+const $ = require('gulp-load-plugins')();
 
 require('./setupTheo')(theo);
-const $ = gulpLoadPlugins();
+const mobileGlobs = require('../utils/mobileGlobs');
+const gulpLoadFiles = require('../utils/gulpLoadFiles');
 
 exports.build = () =>
   gulpLoadFiles(mobileGlobs)

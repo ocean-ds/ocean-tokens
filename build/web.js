@@ -1,7 +1,5 @@
 const gulp = require('gulp');
-
-const gulpLoadPlugins = require('gulp-load-plugins');
-const $ = gulpLoadPlugins();
+const $ = require('gulp-load-plugins')();
 
 gulp.task('build:web:scss', () =>
   gulp

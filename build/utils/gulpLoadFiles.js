@@ -1,23 +1,24 @@
 const gulp = require('gulp');
-const gulpUtil = require('gulp-util');
 const through = require('through2');
 const Vinyl = require('vinyl');
+const $ = require('gulp-load-plugins')();
 
 module.exports = (globs) =>
   gulp
     .src(globs)
-    .pipe(gulpUtil.buffer())
+    .pipe($.util.buffer())
     .pipe(
       through.obj((files, _enc, next) => {
         const filepaths = files.map((file) => file.path).sort();
-        const componentTokenImports = filepaths.reduce(
+        const tokenImports = filepaths.reduce(
           (prev, filepath) => `${prev}\n- ${filepath}`,
           'imports:'
         );
         const file = new Vinyl({
           path: 'custom-tokens.yml',
-          contents: Buffer.from(componentTokenImports),
+          contents: Buffer.from(tokenImports),
         });
+
         next(null, file);
       })
     );

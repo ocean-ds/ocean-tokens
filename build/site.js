@@ -1,8 +1,5 @@
 const gulp = require('gulp');
-const dom = require('gulp-dom');
-
-const gulpLoadPlugins = require('gulp-load-plugins');
-const $ = gulpLoadPlugins();
+const $ = require('gulp-load-plugins')();
 
 gulp.task('build:site:html', () =>
   gulp
@@ -21,7 +18,7 @@ gulp.task('build:site:set-base-url', () =>
   gulp
     .src('static/index.html')
     .pipe(
-      dom(function () {
+      $.dom(function () {
         const header = this.querySelector('head');
         const base = this.createElement('base');
         base.href = 'https://pagnet.github.io/design-tokens/';

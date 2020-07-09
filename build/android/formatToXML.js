@@ -7,9 +7,7 @@ module.exports = (def) => {
   const o = {
     resources: def
       .get('props')
-      .filter((prop) => {
-        return !discardedCategories.includes(prop.get('category'));
-      })
+      .filter((prop) => !discardedCategories.includes(prop.get('category')))
       .map((prop) => {
         const key = (() => {
           const newLocal = prop.get('type');
