@@ -1,7 +1,7 @@
 const gulp = require('gulp');
 const $ = require('gulp-load-plugins')();
 
-gulp.task('build:site:html', () =>
+gulp.task('build:doc:html', () =>
   gulp
     .src('src/tokens.yml')
     .pipe(
@@ -14,7 +14,7 @@ gulp.task('build:site:html', () =>
     .pipe(gulp.dest('static'))
 );
 
-gulp.task('build:site:set-base-url', () =>
+gulp.task('build:doc:set-base-url', () =>
   gulp
     .src('static/index.html')
     .pipe(
@@ -30,4 +30,4 @@ gulp.task('build:site:set-base-url', () =>
     .pipe(gulp.dest('static'))
 );
 
-exports.build = gulp.series('build:site:html', 'build:site:set-base-url');
+exports.build = gulp.series('build:doc:html', 'build:doc:set-base-url');

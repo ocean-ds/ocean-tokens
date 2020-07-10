@@ -15,7 +15,7 @@ jobs:
           command: yarn gulp build:lib
       - run:
           name: Build gh-pages
-          command: yarn gulp build:site
+          command: yarn gulp build:doc
       - persist_to_workspace:
           root: ~/project
           paths:
@@ -56,7 +56,7 @@ jobs:
             yarn version --new-version $VERSION_NUMBER --no-git-tag-version --no-commit-hooks
             yarn publish --access public --tag $TAG_NAME
 
-  deploy-site:
+  deploy-doc:
     executor: node/default
     steps:
       - checkout
@@ -72,7 +72,7 @@ jobs:
             git config user.name "Blu"
       - run:
           name: Deploy static to gh-pages branch
-          command: yarn deploy:site
+          command: yarn deploy:doc
 
 workflows:
   version: 2
@@ -96,7 +96,7 @@ workflows:
               only: /^v.*/
             branches:
               ignore: /.*/
-      - deploy-site:
+      - deploy-doc:
           requires:
             - deploy-pkg
           filters:

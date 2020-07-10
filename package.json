@@ -9,7 +9,7 @@
   ],
   "scripts": {
     "build": "gulp build:all",
-    "deploy:site": "gh-pages -d static",
+    "deploy:doc": "gh-pages -d static",
     "gulp": "gulp",
     "lint": "eslint '.' --quiet"
   },
