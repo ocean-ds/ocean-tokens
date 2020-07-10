@@ -1,16 +1,23 @@
-// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
-// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
-
 const _ = require('lodash');
 const xml = require('xml');
+
+const discardedCategories = [
+  'font-weight',
+  'font-family',
+  'box-shadow',
+  'opacity',
+  'radius',
+];
 
 module.exports = (def) => {
   const o = {
     resources: def
       .get('props')
+      .filter((prop) => !discardedCategories.includes(prop.get('category')))
       .map((prop) => {
         const key = (() => {
-          switch (prop.get('type')) {
+          const newLocal = prop.get('type');
+          switch (newLocal) {
             case 'color':
               return 'color';
             case 'size':
@@ -28,7 +35,10 @@ module.exports = (def) => {
           [key]: [
             {
               _attr: {
-                name: _.toLower(prop.get('name')).replace(/[-]/g, '_'),
+                name: _.toLower(`ocean_${prop.get('name')}`).replace(
+                  /[-]/g,
+                  '_'
+                ),
                 category: prop.get('category'),
               },
             },
@@ -38,6 +48,7 @@ module.exports = (def) => {
       })
       .toJS(),
   };
+
   return xml(o, {
     indent: '  ',
     declaration: true,
