@@ -78,6 +78,14 @@ jobs:
           name: Deploy static to gh-pages branch
           command: yarn deploy:doc
 
+  trigger-ios:
+    executor: node/default
+    steps:
+      - run:
+          name: Update ios pod OceanTokens
+          command: |
+            curl -u $CIRCLE_CI_TOKEN -d build_parameters\[CIRCLE_JOB\]=deploy-ocean-tokens https://circleci.com/api/v1.1/project/gh/Pagnet/ocean-ds-ios/tree/circleci-project-setup
+
 workflows:
   version: 2
   build-deploy:
@@ -106,3 +114,11 @@ workflows:
           filters:
             tags:
               only: /^v.*/
+      - trigger-ios:
+          requires:
+            - deploy-pkg
+          filters:
+            tags:
+              only: /^v(\d+\.){2}\d+$/
+            branches:
+              ignore: /.*/
