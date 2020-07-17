@@ -1,0 +1,82 @@
+/********** Nunito Sans *********/
+@font-face {
+  font-family: 'Nunito Sans';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: local('Nunito Sans Light'), local('NunitoSans-Light'),
+    url('../fonts/NunitoSans/NunitoSans-Light.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Nunito Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Nunito Sans Regular'), local('NunitoSans-Regular'),
+    url('../fonts/NunitoSans/NunitoSans-Regular.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Nunito Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: local('Nunito Sans SemiBold'), local('NunitoSans-SemiBold'),
+    url('../fonts/NunitoSans/NunitoSans-SemiBold.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Nunito Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Nunito Sans Bold'), local('NunitoSans-Bold'),
+    url('../fonts/NunitoSans/NunitoSans-Bold.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Nunito Sans';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: local('Nunito Sans ExtraBold'), local('NunitoSans-ExtraBold'),
+    url('../fonts/NunitoSans/NunitoSans-ExtraBold.woff2') format('woff2');
+}
+/********** Avenir *********/
+@font-face {
+  font-family: 'Avenir';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: local('Avenir Light'), local('Avenir-Light'),
+    url('../fonts/Avenir/Avenir-Light.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Avenir';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Avenir Roman'), local('Avenir-Roman'),
+    url('../fonts/Avenir/Avenir-Roman.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Avenir';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: local('Avenir Medium'), local('Avenir-Medium'),
+    url('../fonts/Avenir/Avenir-Medium.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Avenir';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Avenir Bold'), local('Avenir-Bold'),
+    url('../fonts/Avenir/Avenir-Bold.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Avenir';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: local('Avenir Black'), local('Avenir-Black'),
+    url('../fonts/Avenir/Avenir-Black.woff2') format('woff2');
+}
