@@ -69,8 +69,8 @@
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: local('Avenir Bold'), local('Avenir-Bold'),
-    url('../fonts/Avenir/Avenir-Bold.woff2') format('woff2');
+  src: local('Avenir Heavy'), local('Avenir-Heavy'),
+    url('../fonts/Avenir/Avenir-Heavy.woff2') format('woff2');
 }
 @font-face {
   font-family: 'Avenir';
