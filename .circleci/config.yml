@@ -80,7 +80,15 @@ jobs:
       - run:
           name: Update ios pod OceanTokens
           command: |
-            curl -u $CIRCLE_CI_TOKEN -d build_parameters\[CIRCLE_JOB\]=deploy-ocean-tokens https://circleci.com/api/v1.1/project/gh/Pagnet/ocean-ds-ios/tree/circleci-project-setup
+            curl -u $CIRCLE_CI_TOKEN_OCEAN_DS_IOS -d build_parameters\[CIRCLE_JOB\]=deploy-ocean-tokens https://circleci.com/api/v1.1/project/gh/Pagnet/ocean-ds-ios/tree/circleci-project-setup
+
+  trigger-android:
+    executor: node/default
+    steps:
+      - run:
+          name: Update android lib tokens aar
+          command: |
+            curl -u $CIRCLE_CI_TOKEN_OCEAN_DS_ANDROID -d build_parameters\[CIRCLE_JOB\]=deploy-ocean-tokens https://circleci.com/api/v1.1/project/gh/Pagnet/ocean-ds-android/tree/circleci-project-setup
 
 workflows:
   version: 2
@@ -111,6 +119,12 @@ workflows:
             tags:
               only: /^v(\d+\.){2}\d+$/
       - trigger-ios:
+          requires:
+            - deploy-pkg
+          filters:
+            tags:
+              only: /^v(\d+\.){2}\d+$/
+      - trigger-android:
           requires:
             - deploy-pkg
           filters:
