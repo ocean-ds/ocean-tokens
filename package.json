@@ -45,7 +45,7 @@
     "immutable": "^4.0.0-rc.12",
     "lodash": "^4.17.19",
     "prettier": "2.0.5",
-    "pretty-quick": "^2.0.1",
+    "pretty-quick": "^3.0.1",
     "theo": "^8.1.5",
     "through2": "^4.0.2",
     "vinyl": "^2.2.0"
