@@ -61,5 +61,8 @@
     "hooks": {
       "pre-commit": "pretty-quick --staged"
     }
+  },
+  "dependencies": {
+    "yargs-parser": "^13.1.2"
   }
 }
