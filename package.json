@@ -44,7 +44,7 @@
     "husky": "^4.3.0",
     "immutable": "^4.0.0-rc.12",
     "lodash": "^4.17.19",
-    "prettier": "2.0.5",
+    "prettier": "2.2.0",
     "pretty-quick": "^3.0.2",
     "theo": "^8.1.5",
     "through2": "^4.0.2",
