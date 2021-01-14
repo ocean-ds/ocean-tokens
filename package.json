@@ -48,7 +48,7 @@
     "pretty-quick": "^3.1.0",
     "theo": "^8.1.5",
     "through2": "^4.0.2",
-    "vinyl": "^2.2.0"
+    "vinyl": "^2.2.1"
   },
   "engines": {
     "node": ">=12.0.0"
