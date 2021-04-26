@@ -26,7 +26,7 @@
   "homepage": "https://pagnet.github.io/design-tokens/",
   "devDependencies": {
     "del": "^6.0.0",
-    "eslint": "^7.18.0",
+    "eslint": "^7.25.0",
     "eslint-config-prettier": "^7.1.0",
     "eslint-config-standard": "^16.0.2",
     "eslint-plugin-import": "^2.22.1",
