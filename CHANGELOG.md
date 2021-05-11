@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Changed
 
-- Package structure to maintain a separation between platforms (PRs: [#51](https://github.com/Pagnet/design-tokens/pull/51), [#50](https://github.com/Pagnet/design-tokens/pull/50))
+- Package structure to maintain a separation between platforms (PRs: [#51](https://github.com/ocean-ds/ocean-tokens/pull/51), [#50](https://github.com/ocean-ds/ocean-tokens/pull/50))
 
   ```
     /dist
@@ -21,15 +21,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Added
 
-- Font files used in design-system (Avenir, NunitoSans). (PR [#50](https://github.com/Pagnet/design-tokens/pull/50))
-- Mobile token files. (PR [#51](https://github.com/Pagnet/design-tokens/pull/51))
-- Font declaration file for web (@font-faces). (PR [#53](https://github.com/Pagnet/design-tokens/pull/53))
+- Font files used in design-system (Avenir, NunitoSans). (PR [#50](https://github.com/ocean-ds/ocean-tokens/pull/50))
+- Mobile token files. (PR [#51](https://github.com/ocean-ds/ocean-tokens/pull/51))
+- Font declaration file for web (@font-faces). (PR [#53](https://github.com/ocean-ds/ocean-tokens/pull/53))
 
 ## 1.0.0 (June 23, 2020)
 
 ### First stable release :rocket:
 
-- Tokens remodeled and separated by categories, follow the [document](https://pagnet.github.io/design-tokens/)
+- Tokens remodeled and separated by categories, follow the [document](https://ocean-ds.github.io/ocean-tokens/)
 - Design tokens avaliable in:
   - @useblu/tokens (npm)
 

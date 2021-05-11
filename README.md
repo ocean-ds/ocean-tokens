@@ -1,6 +1,6 @@
 # Design tokens
 
-[![Pagnet](https://circleci.com/gh/Pagnet/design-tokens/tree/master.svg?style=shield)](https://circleci.com/gh/Pagnet/design-tokens/tree/master) [![Maintainability](https://api.codeclimate.com/v1/badges/3bd94959d7302d83057d/maintainability)](https://codeclimate.com/repos/5d9101d66ac2d031ba00001e/maintainability) [![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=Pagnet/design-tokens&identifier=206170935)](https://dependabot.com) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
+[![ocean-ds](https://circleci.com/gh/ocean-ds/ocean-tokens/tree/master.svg?style=shield)](https://circleci.com/gh/ocean-ds/ocean-tokens/tree/master) [![Maintainability](https://api.codeclimate.com/v1/badges/3bd94959d7302d83057d/maintainability)](https://codeclimate.com/repos/5d9101d66ac2d031ba00001e/maintainability) [![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=ocean-ds/ocean-tokens&identifier=206170935)](https://dependabot.com) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
 This is an internal project at Blu Pagamentos powered by [Theo](https://github.com/salesforce-ux/theo) that provides design tokens for our design system.
 
@@ -10,7 +10,7 @@ This is an internal project at Blu Pagamentos powered by [Theo](https://github.c
 
 ### Download and Install Manually
 
-Tokens are available by plaftorm for download as packages in the [github releases page](https://github.com/Pagnet/design-tokens/releases).
+Tokens are available by plaftorm for download as packages in the [github releases page](https://github.com/ocean-ds/ocean-tokens/releases).
 
 ## Usage
 
@@ -57,17 +57,17 @@ Please make sure to use english everywhere ;)
 
 ### Code of conduct
 
-We have a [code of conduct](https://github.com/Pagnet/design-tokens/blob/master/CODE_OF_CONDUCT.md),
+We have a [code of conduct](https://github.com/ocean-ds/ocean-tokens/blob/master/CODE_OF_CONDUCT.md),
 please follow it in all your interactions with the project.
 
 ### Contributing guide
 
-Read the [contributing guide](https://github.com/Pagnet/design-tokens/blob/master/CONTRIBUTING.md)
+Read the [contributing guide](https://github.com/ocean-ds/ocean-tokens/blob/master/CONTRIBUTING.md)
 to learn how to propose changes and understand our development process.
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/Pagnet/design-tokens/tags).
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/ocean-ds/ocean-tokens/tags).
 
 ## Resources
 

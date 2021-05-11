@@ -14,16 +14,16 @@
     "lint": "eslint '.' --quiet"
   },
   "author": "Blu Pagamentos <devs@useblu.com.br>",
-  "repository": "git+https://github.com/Pagnet/design-tokens.git",
+  "repository": "git+https://github.com/ocean-ds/ocean-tokens.git",
   "keywords": [
     "design-tokens",
     "theo",
     "design-system"
   ],
   "bugs": {
-    "url": "https://github.com/Pagnet/design-tokens/issues"
+    "url": "https://github.com/ocean-ds/ocean-tokens/issues"
   },
-  "homepage": "https://pagnet.github.io/design-tokens/",
+  "homepage": "https://ocean-ds.github.io/ocean-tokens/",
   "devDependencies": {
     "del": "^6.0.0",
     "eslint": "^7.18.0",
