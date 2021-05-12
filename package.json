@@ -43,7 +43,7 @@
     "gulp-util": "^3.0.8",
     "husky": "^4.3.8",
     "immutable": "^4.0.0-rc.12",
-    "lodash": "^4.17.20",
+    "lodash": "^4.17.21",
     "prettier": "2.2.1",
     "pretty-quick": "^3.1.0",
     "theo": "^8.1.5",
