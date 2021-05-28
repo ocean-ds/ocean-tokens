@@ -57,7 +57,7 @@ Please make sure to use english everywhere ;)
 
 ### Code of conduct
 
-We have a [code of conduct](https://github.com/ocean-ds/ocean-tokens/blob/master/CODE_OF_CONDUCT.md),
+We have a [code of conduct](.github/CODE_OF_CONDUCT.md),
 please follow it in all your interactions with the project.
 
 ### Contributing guide
