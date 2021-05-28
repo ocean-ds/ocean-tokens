@@ -62,7 +62,7 @@ please follow it in all your interactions with the project.
 
 ### Contributing guide
 
-Read the [contributing guide](https://github.com/ocean-ds/ocean-tokens/blob/master/CONTRIBUTING.md)
+Read the [contributing guide](.github/CONTRIBUTING.md)
 to learn how to propose changes and understand our development process.
 
 ## Versioning
