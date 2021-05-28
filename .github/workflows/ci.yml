@@ -39,9 +39,3 @@ jobs:
 
       - name: Lint commit message
         run: git log -1 --pretty=format:"%s" | npx commitlint
-
-      - name: SonarCloud Scan
-        uses: SonarSource/sonarcloud-github-action@master
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
