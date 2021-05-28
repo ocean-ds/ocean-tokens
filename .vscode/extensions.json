@@ -3,6 +3,7 @@
     "esbenp.prettier-vscode",
     "coenraads.bracket-pair-colorizer",
     "vscode-icons-team.vscode-icons",
-    "eamodio.gitlens"
+    "eamodio.gitlens",
+    "knisterpeter.vscode-commitizen"
   ]
 }

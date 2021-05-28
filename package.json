@@ -11,7 +11,8 @@
     "build": "gulp build:all",
     "deploy:doc": "gh-pages -d static",
     "gulp": "gulp",
-    "lint": "eslint '.' --quiet"
+    "lint": "eslint '.' --quiet",
+    "cm": "cz"
   },
   "author": "Blu Pagamentos <devs@useblu.com.br>",
   "repository": "git+https://github.com/ocean-ds/ocean-tokens.git",
@@ -25,6 +26,9 @@
   },
   "homepage": "https://ocean-ds.github.io/ocean-tokens/",
   "devDependencies": {
+    "@commitlint/cli": "^12.1.4",
+    "@commitlint/config-conventional": "^12.1.4",
+    "cz-conventional-changelog": "3.3.0",
     "del": "^6.0.0",
     "eslint": "^7.18.0",
     "eslint-config-prettier": "^7.1.0",
@@ -51,11 +55,22 @@
     "vinyl": "^2.2.1"
   },
   "engines": {
-    "node": ">=12.0.0"
+    "node": ">=12.8.0",
+    "yarn": ">=1.22.0"
   },
   "license": "GPL-3.0",
   "prettier": {
     "singleQuote": true
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   },
   "husky": {
     "hooks": {
