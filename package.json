@@ -12,7 +12,8 @@
     "deploy:doc": "gh-pages -d static",
     "gulp": "gulp",
     "lint": "eslint '.' --quiet",
-    "cm": "cz"
+    "cm": "cz",
+    "prepare": "husky install"
   },
   "author": "Blu Pagamentos <devs@useblu.com.br>",
   "repository": "git+https://github.com/ocean-ds/ocean-tokens.git",
@@ -45,7 +46,7 @@
     "gulp-rename": "^2.0.0",
     "gulp-theo": "^2.0.1",
     "gulp-util": "^3.0.8",
-    "husky": "^4.3.8",
+    "husky": "^6.0.0",
     "immutable": "^4.0.0-rc.12",
     "lodash": "^4.17.21",
     "prettier": "2.2.1",
@@ -70,11 +71,6 @@
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
-    }
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "pretty-quick --staged"
     }
   }
 }
