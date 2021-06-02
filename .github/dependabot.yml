@@ -1,0 +1,12 @@
+version: 2
+updates:
+  - package-ecosystem: 'npm'
+    directory: '/'
+    schedule:
+      interval: 'weekly'
+    reviewers:
+      - 'ocean-ds/developers'
+    assignees:
+      - 'SauloSilva'
+    commit-message:
+      prefix: 'chore'
