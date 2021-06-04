@@ -24,4 +24,4 @@ gulp.task(
   )
 );
 
-gulp.task('build:all', gulp.series('build:lib', 'build:doc'));
+gulp.task('default', gulp.series('build:lib', 'build:doc'));

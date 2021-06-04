@@ -2,30 +2,31 @@
   "name": "@useblu/tokens",
   "version": "0.0.0-controlled-by-tags",
   "private": false,
-  "description": "A design tokens project",
+  "description": "Design Tokens for the Ocean Design System",
   "files": [
     "dist",
     "README.md"
   ],
   "scripts": {
-    "build": "gulp build:all",
+    "prepare": "husky install",
+    "build": "gulp",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "eslint '.'",
+    "lint:fix": "eslint '.' --fix",
     "deploy:doc": "gh-pages -d static",
-    "gulp": "gulp",
-    "lint": "eslint '.' --quiet",
-    "cm": "cz",
-    "prepare": "husky install"
+    "cm": "cz"
   },
-  "author": "Blu Pagamentos <devs@useblu.com.br>",
-  "repository": "git+https://github.com/ocean-ds/ocean-tokens.git",
   "keywords": [
     "design-tokens",
     "theo",
     "design-system"
   ],
-  "bugs": {
-    "url": "https://github.com/ocean-ds/ocean-tokens/issues"
-  },
   "homepage": "https://ocean-ds.github.io/ocean-tokens/",
+  "bugs": "https://github.com/ocean-ds/ocean-tokens/issues",
+  "license": "GPL-3.0",
+  "author": "Blu Pagamentos <devs@useblu.com.br>",
+  "repository": "git+https://github.com/ocean-ds/ocean-tokens.git",
   "devDependencies": {
     "@commitlint/cli": "^12.1.4",
     "@commitlint/config-conventional": "^12.1.4",
@@ -59,7 +60,6 @@
     "node": ">=12.8.0",
     "yarn": ">=1.22.0"
   },
-  "license": "GPL-3.0",
   "prettier": {
     "singleQuote": true
   },
@@ -72,5 +72,6 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
-  }
+  },
+  "sideEffects": false
 }
