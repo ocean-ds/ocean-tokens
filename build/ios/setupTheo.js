@@ -2,8 +2,8 @@ const theoReplaceAll = require('../utils/theoReplaceAll');
 
 function convertToMap(str) {
   str = str.replace('rgba(', '').replace(')', '');
-  var res = str.split(' ');
-  var prefix = [
+  const res = str.split(' ');
+  const prefix = [
     '"x":',
     ', "y":',
     ', "radius":',
@@ -12,7 +12,7 @@ function convertToMap(str) {
     '"blue":',
     '"alpha":',
   ];
-  var text = '';
+  let text = '';
   for (let i = 0; i < res.length; i++) {
     text += prefix[i] + ' ' + res[i];
   }

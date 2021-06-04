@@ -10,12 +10,12 @@ module.exports = (def) => {
       const k = _.camelCase(prop.get('name'));
       let v = prop.get('value');
 
-      var fontSearch = k.search('fontFamily');
+      const fontSearch = k.search('fontFamily');
       if (fontSearch > -1) {
         v = v.replace(/\s/g, '');
       }
 
-      var n = v.search('%');
+      const n = v.search('%');
       if (n > -1) {
         v = v.replace('%', '');
         if (isNaN(v) == false) v = v / 100;
@@ -23,8 +23,8 @@ module.exports = (def) => {
 
       if (isNaN(v)) v = JSON.stringify(v);
 
-      var isFontWeight = k.search('fontWeight');
-      var isFontFamily = k.search('fontFamily');
+      const isFontWeight = k.search('fontWeight');
+      const isFontFamily = k.search('fontFamily');
       if (isFontWeight == -1 && isFontFamily == -1) {
         result = result.push(`  "${k}": ${v},`);
       }
@@ -50,7 +50,7 @@ module.exports = (def) => {
           'Heavy',
           'Black',
         ];
-        for (var i = weightKeys.length - 1; i >= 0; i--) {
+        for (let i = weightKeys.length - 1; i >= 0; i--) {
           const keyWeight = k + weightKeys[i];
 
           if (k == 'fontFamilyBase') {

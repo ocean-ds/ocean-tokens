@@ -5,12 +5,7 @@ module.exports = {
     node: true,
   },
   extends: ['standard', 'prettier'],
-  plugins: ['import', 'standard'],
   parserOptions: {
-    ecmaVersion: 11,
-  },
-  rules: {
-    'space-before-function-paren': 0,
-    'new-cap': 0,
+    ecmaVersion: 12,
   },
 };
