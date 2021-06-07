@@ -22,6 +22,7 @@ gulp.task('build:web:js', () =>
         format: { type: 'module.js' },
       })
     )
+    .pipe($.rename('tokens.js'))
     .pipe(gulp.dest('dist/web'))
 );
 
