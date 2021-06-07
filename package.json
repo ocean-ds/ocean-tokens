@@ -1,6 +1,6 @@
 {
   "name": "@useblu/tokens",
-  "version": "0.0.0-controlled-by-tags",
+  "version": "2.0.0",
   "private": false,
   "description": "Design Tokens for the Ocean Design System",
   "files": [
@@ -14,6 +14,7 @@
     "format:check": "prettier --check .",
     "lint": "eslint '.'",
     "lint:fix": "eslint '.' --fix",
+    "predeploy:doc": "gulp build:doc",
     "deploy:doc": "gh-pages -d static",
     "cm": "cz"
   },
@@ -30,6 +31,8 @@
   "devDependencies": {
     "@commitlint/cli": "^12.1.4",
     "@commitlint/config-conventional": "^12.1.4",
+    "@semantic-release/changelog": "^5.0.1",
+    "@semantic-release/git": "^9.0.0",
     "cz-conventional-changelog": "3.3.0",
     "del": "^6.0.0",
     "eslint": "^7.28.0",
@@ -52,6 +55,7 @@
     "lodash": "^4.17.21",
     "prettier": "2.3.1",
     "pretty-quick": "^3.1.0",
+    "semantic-release": "^17.4.3",
     "theo": "^8.1.5",
     "through2": "^4.0.2",
     "vinyl": "^2.2.1"
@@ -72,6 +76,9 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "sideEffects": false
 }

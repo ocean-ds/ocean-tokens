@@ -21,6 +21,9 @@
   <a href="https://github.com/prettier/prettier">
     <img alt="Prettier code style" src="https://img.shields.io/badge/code_style-prettier-ff69b4.svg">
   </a>
+  <a href="https://github.com/semantic-release/semantic-release">
+    <img alt="Semantic release" src="https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg">
+  </a>
   <a href="https://conventionalcommits.org">
     <img alt="Conventional Commits" src="https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg">
   </a>
