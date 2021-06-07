@@ -1,3 +1,9 @@
+## [2.0.1](https://github.com/ocean-ds/ocean-tokens/compare/v2.0.0...v2.0.1) (2021-06-07)
+
+### Bug Fixes
+
+- package.json & yarn.lock to reduce vulnerabilities ([#133](https://github.com/ocean-ds/ocean-tokens/issues/133)) ([0585a7d](https://github.com/ocean-ds/ocean-tokens/commit/0585a7d79c3c7fb652ad26be55c27f00e9809cae))
+
 # Changelog
 
 All notable changes to this project will be documented in this file.
