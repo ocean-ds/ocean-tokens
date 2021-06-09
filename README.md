@@ -60,7 +60,7 @@ import {
   fontWeightExtrabold,
   lineHeightMedium,
   colorInterfaceLightPure,
-} from '@useblu/tokens/dist/web/tokens.module.js';
+} from '@useblu/ocean-tokens/web/tokens.module.js';
 
 export const Heading1 = styled.h1`
   font-family: ${fontFamilyHighlight};
@@ -74,7 +74,7 @@ export const Heading1 = styled.h1`
 ### Sass
 
 ```scss
-@import '~@useblu/tokens/dist/web/tokens.scss';
+@import '~@useblu/ocean-tokens/web/tokens.scss';
 
 .h1 {
   font-family: $font-family-highlight;

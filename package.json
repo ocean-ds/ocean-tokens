@@ -1,14 +1,10 @@
 {
-  "name": "@useblu/tokens",
+  "name": "@useblu/ocean-tokens",
   "version": "2.0.1",
   "private": false,
   "description": "Design Tokens for the Ocean Design System",
-  "files": [
-    "dist",
-    "README.md"
-  ],
   "scripts": {
-    "prepare": "husky install",
+    "prepare": "is-ci || husky install",
     "build": "gulp",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
@@ -16,7 +12,8 @@
     "lint:fix": "eslint '.' --fix",
     "predeploy:doc": "gulp build:doc",
     "deploy:doc": "gh-pages -d static",
-    "cm": "cz"
+    "cm": "cz",
+    "postversion": "cp -r package.json .."
   },
   "keywords": [
     "design-tokens",
@@ -52,6 +49,7 @@
     "gulp-util": "^3.0.8",
     "husky": "^6.0.0",
     "immutable": "^4.0.0-rc.12",
+    "is-ci": "^3.0.0",
     "lodash": "^4.17.21",
     "prettier": "2.3.1",
     "pretty-quick": "^3.1.0",

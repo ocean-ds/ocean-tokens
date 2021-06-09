@@ -10,6 +10,11 @@ gulp.task('clean:dist', () => del('dist/**', { force: true }));
 gulp.task('copy:assets', () =>
   gulp.src('assets/**/*').pipe(gulp.dest('dist/assets'))
 );
+gulp.task('copy:files', () =>
+  gulp
+    .src(['package.json', 'README.md', 'CHANGELOG.md', 'LICENSE'])
+    .pipe(gulp.dest('dist'))
+);
 
 gulp.task('build:doc', doc.build);
 gulp.task('build:web', web.build);
@@ -20,7 +25,13 @@ gulp.task(
   'build:lib',
   gulp.series(
     'clean:dist',
-    gulp.parallel('copy:assets', 'build:web', 'build:android', 'build:ios')
+    gulp.parallel(
+      'copy:assets',
+      'copy:files',
+      'build:web',
+      'build:android',
+      'build:ios'
+    )
   )
 );
 
