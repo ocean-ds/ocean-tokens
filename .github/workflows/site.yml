@@ -5,7 +5,7 @@ on:
     types: [published]
 
 jobs:
-  storybook:
+  gh-pages:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
