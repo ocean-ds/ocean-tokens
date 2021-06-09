@@ -1,18 +1,16 @@
 # [3.0.0](https://github.com/ocean-ds/ocean-tokens/compare/v2.0.1...v3.0.0) (2021-06-09)
 
-
 ### Features
 
-* change pkg name to ocean-tokens ([6892731](https://github.com/ocean-ds/ocean-tokens/commit/6892731fc4334a3c7629e66ef75b6f79ecaaf4a1))
-* shrink import path ([9082433](https://github.com/ocean-ds/ocean-tokens/commit/9082433ced7fb972a6edf90fabeb452e4e662d6d))
-* **web:** rename tokens.module.js to tokens.js ([c71e951](https://github.com/ocean-ds/ocean-tokens/commit/c71e951b42f788b02be85ea41804a3c0a1b56659))
-
+- change pkg name to ocean-tokens ([6892731](https://github.com/ocean-ds/ocean-tokens/commit/6892731fc4334a3c7629e66ef75b6f79ecaaf4a1))
+- shrink import path ([9082433](https://github.com/ocean-ds/ocean-tokens/commit/9082433ced7fb972a6edf90fabeb452e4e662d6d))
+- **web:** rename tokens.module.js to tokens.js ([c71e951](https://github.com/ocean-ds/ocean-tokens/commit/c71e951b42f788b02be85ea41804a3c0a1b56659))
 
 ### BREAKING CHANGES
 
-* change pkg name from @useblu/tokens to @useblu/ocean-tokens
-* omit the directory '/dist' of the imports path
-* **web:** normalizes tokens filename for web renaming js exported
+- change pkg name from @useblu/tokens to @useblu/ocean-tokens
+- omit the directory '/dist' of the imports path
+- **web:** normalizes tokens filename for web renaming js exported
 
 ## [2.0.1](https://github.com/ocean-ds/ocean-tokens/compare/v2.0.0...v2.0.1) (2021-06-07)
 
