@@ -1,15 +1,10 @@
-# Change Log
-
-All notable changes to this project will be documented in this file.
-See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
-
 ## [2.0.1](https://github.com/ocean-ds/ocean-tokens/compare/v2.0.0...v2.0.1) (2021-06-07)
 
 ### Bug Fixes
 
 - package.json & yarn.lock to reduce vulnerabilities ([#133](https://github.com/ocean-ds/ocean-tokens/issues/133)) ([0585a7d](https://github.com/ocean-ds/ocean-tokens/commit/0585a7d79c3c7fb652ad26be55c27f00e9809cae))
 
-## 2.0.0 (July 21, 2020)
+# 2.0.0 (July 21, 2020)
 
 ### Changed
 
@@ -29,7 +24,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - Mobile token files. (PR [#51](https://github.com/ocean-ds/ocean-tokens/pull/51))
 - Font declaration file for web (@font-faces). (PR [#53](https://github.com/ocean-ds/ocean-tokens/pull/53))
 
-## 1.0.0 (June 23, 2020)
+# 1.0.0 (June 23, 2020)
 
 ### First stable release :rocket:
 
@@ -37,7 +32,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - Design tokens avaliable in:
   - @useblu/tokens (npm)
 
-## 0.1.0 (September 29, 2019)
+# 0.1.0 (September 29, 2019)
 
 ### First tokens :tada::clap:
 
