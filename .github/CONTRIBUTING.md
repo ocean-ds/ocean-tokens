@@ -109,7 +109,7 @@ The development language is English. All comments and documentation should be wr
 
 ### Commit Message
 
-We adopted [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/#summary). This improves the readability of the git history and generates automatic changelogs via lerna.
+We adopted [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/#summary). This improves the readability of the git history and generates automatic changelogs via semantic-release.
 
 - `yarn cm` will guide you adhering to a commit convention.
 - There's a [vscode extension](https://marketplace.visualstudio.com/items?itemName=vivaxy.vscode-conventional-commits) to help you.
