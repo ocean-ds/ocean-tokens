@@ -25,6 +25,12 @@ props:
       friendlyName: Color Status Positive Down
     category: background-color
 
+  - name: color-status-positive-deep
+    value: '{!color-status-positive-deep}'
+    meta:
+      friendlyName: Color Status Positive Deep
+    category: background-color
+
   - name: color-status-neutral-pure
     value: '{!color-status-neutral-pure}'
     meta:
@@ -43,6 +49,12 @@ props:
       friendlyName: Color Status neutral down
     category: background-color
 
+  - name: color-status-neutral-deep
+    value: '{!color-status-neutral-deep}'
+    meta:
+      friendlyName: Color Status neutral deep
+    category: background-color
+
   - name: color-status-negative-pure
     value: '{!color-status-negative-pure}'
     meta:
@@ -59,4 +71,10 @@ props:
     value: '{!color-status-negative-down}'
     meta:
       friendlyName: Color Status negative down
+    category: background-color
+
+  - name: color-status-negative-deep
+    value: '{!color-status-negative-deep}'
+    meta:
+      friendlyName: Color Status negative deep
     category: background-color
