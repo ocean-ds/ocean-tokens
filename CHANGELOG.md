@@ -1,3 +1,10 @@
+# [3.1.0](https://github.com/ocean-ds/ocean-tokens/compare/v3.0.1...v3.1.0) (2021-06-17)
+
+
+### Features
+
+* **color:** change status colors and create deep variations ([#150](https://github.com/ocean-ds/ocean-tokens/issues/150)) ([3f86ad0](https://github.com/ocean-ds/ocean-tokens/commit/3f86ad0a6a635fc6fb1fb49964f0a73c6ac2efed))
+
 ## [3.0.1](https://github.com/ocean-ds/ocean-tokens/compare/v3.0.0...v3.0.1) (2021-06-15)
 
 
