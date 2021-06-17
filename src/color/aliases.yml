@@ -30,7 +30,7 @@ aliases:
   color-status-positive-deep: '#2DA94F'
   color-status-neutral-pure: '#FFA347'
   color-status-neutral-up: '#FFF9F4'
-  color-status-neutral-down: '#FF8D7A'
+  color-status-neutral-down: '#FFF7F0'
   color-status-neutral-deep: '#FF8A14'
   color-status-negative-pure: '#F5456E'
   color-status-negative-up: '#FFF1F4'
