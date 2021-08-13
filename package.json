@@ -13,6 +13,7 @@
     "predeploy:doc": "gulp build:doc",
     "deploy:doc": "gh-pages -d static",
     "cm": "cz",
+    "version": "prettier --write 'CHANGELOG.md'",
     "postversion": "cp -r package.json .."
   },
   "keywords": [

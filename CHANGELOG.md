@@ -1,16 +1,14 @@
 # [3.1.0](https://github.com/ocean-ds/ocean-tokens/compare/v3.0.1...v3.1.0) (2021-06-17)
 
-
 ### Features
 
-* **color:** change status colors and create deep variations ([#150](https://github.com/ocean-ds/ocean-tokens/issues/150)) ([3f86ad0](https://github.com/ocean-ds/ocean-tokens/commit/3f86ad0a6a635fc6fb1fb49964f0a73c6ac2efed))
+- **color:** change status colors and create deep variations ([#150](https://github.com/ocean-ds/ocean-tokens/issues/150)) ([3f86ad0](https://github.com/ocean-ds/ocean-tokens/commit/3f86ad0a6a635fc6fb1fb49964f0a73c6ac2efed))
 
 ## [3.0.1](https://github.com/ocean-ds/ocean-tokens/compare/v3.0.0...v3.0.1) (2021-06-15)
 
-
 ### Bug Fixes
 
-* package.json & yarn.lock to reduce vulnerabilities ([#149](https://github.com/ocean-ds/ocean-tokens/issues/149)) ([34b58b7](https://github.com/ocean-ds/ocean-tokens/commit/34b58b715444acc8abfed11ea6def529089973a7))
+- package.json & yarn.lock to reduce vulnerabilities ([#149](https://github.com/ocean-ds/ocean-tokens/issues/149)) ([34b58b7](https://github.com/ocean-ds/ocean-tokens/commit/34b58b715444acc8abfed11ea6def529089973a7))
 
 # [3.0.0](https://github.com/ocean-ds/ocean-tokens/compare/v2.0.1...v3.0.0) (2021-06-09)
 
