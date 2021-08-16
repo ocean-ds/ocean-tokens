@@ -7,6 +7,6 @@ updates:
     reviewers:
       - 'ocean-ds/developers'
     assignees:
-      - 'SauloSilva'
+      - 'GabrielFn'
     commit-message:
       prefix: 'chore'
