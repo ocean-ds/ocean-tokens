@@ -30,6 +30,9 @@
   <a href="http://makeapullrequest.com">
     <img alt="Conventional Commits" src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg">
   </a>
+  <a href="https://discord.gg/hDWzGPKuG2">
+    <img alt="Discord Server" src="https://img.shields.io/discord/875438252172136468.svg?color=7389D8&labelColor=6A7EC2&logo=discord&logoColor=ffffff">
+  </a>  
 </p>
 
 This project powered by [Theo](https://github.com/salesforce-ux/theo) provides design tokens to the [Ocean](https://zeroheight.com/9c9b2b3aa/p/257272-ocean-ds/t/968532) design system.
@@ -100,6 +103,10 @@ Read our [contributing guide](.github/CONTRIBUTING.md) to learn about our develo
 ### Good First Issues
 
 To help you get your feet wet and get you familiar with our contribution process, we have a list of [good first issues](https://github.com/ocean-ds/ocean-tokens/labels/good%20first%20issue) that contain bugs which have a relatively limited scope. This is a great place to get started.
+
+## Join our community
+
+Join our [discord server](https://discord.gg/hDWzGPKuG2) to get the latest updates, chat with other Ocean enthusiasts, and see what's happening in the community!
 
 ## License
 
