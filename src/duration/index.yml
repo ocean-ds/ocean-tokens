@@ -1,0 +1,8 @@
+---
+global:
+  type: time
+  category: all
+
+props:
+  - name: duration-1
+    value: '2s'

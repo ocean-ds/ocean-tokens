@@ -8,5 +8,6 @@ imports:
   - ./shadow/index.yml
   - ./spacing/index.yml
   - ./typography/index.yml
+  - ./duration/index.yml
 global:
   category: tokens

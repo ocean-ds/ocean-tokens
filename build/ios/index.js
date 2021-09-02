@@ -41,6 +41,9 @@ exports.build = gulp.parallel(
   withName('build:ios:shadow')(
     buildCreator('src/shadow/index.yml', 'tokens-shadow.json')
   ),
+  withName('build:ios:duration')(
+    buildCreator('src/duration/index.yml', 'tokens-duration.json')
+  ),
   withName('build:ios:fontNames')(
     buildCreator(
       ['src/typography/font-family.yml', 'src/typography/font-weight.yml'],
