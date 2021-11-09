@@ -1,3 +1,10 @@
+## [3.1.3](https://github.com/ocean-ds/ocean-tokens/compare/v3.1.2...v3.1.3) (2021-11-09)
+
+
+### Bug Fixes
+
+* upgrade prettier from 2.3.2 to 2.4.0 ([#187](https://github.com/ocean-ds/ocean-tokens/issues/187)) ([2bbb15b](https://github.com/ocean-ds/ocean-tokens/commit/2bbb15bf83629a447598ab4cbdaa72062c8fe67b))
+
 ## [3.1.2](https://github.com/ocean-ds/ocean-tokens/compare/v3.1.1...v3.1.2) (2021-11-09)
 
 
