@@ -1,3 +1,10 @@
+## [3.1.1](https://github.com/ocean-ds/ocean-tokens/compare/v3.1.0...v3.1.1) (2021-11-09)
+
+
+### Bug Fixes
+
+* upgrade multiple dependencies with Snyk ([#189](https://github.com/ocean-ds/ocean-tokens/issues/189)) ([765d6e9](https://github.com/ocean-ds/ocean-tokens/commit/765d6e9bdd3f21118c54e091ba95918238e6138b))
+
 # [3.1.0](https://github.com/ocean-ds/ocean-tokens/compare/v3.0.1...v3.1.0) (2021-06-17)
 
 ### Features
