@@ -1,6 +1,6 @@
 {
   "name": "@useblu/ocean-tokens",
-  "version": "3.1.0",
+  "version": "3.1.1",
   "private": false,
   "description": "Design Tokens for the Ocean Design System",
   "scripts": {
