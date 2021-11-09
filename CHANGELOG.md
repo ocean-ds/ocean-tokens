@@ -1,3 +1,10 @@
+## [3.1.4](https://github.com/ocean-ds/ocean-tokens/compare/v3.1.3...v3.1.4) (2021-11-09)
+
+
+### Bug Fixes
+
+* upgrade immutable from 4.0.0-rc.14 to 4.0.0 ([#193](https://github.com/ocean-ds/ocean-tokens/issues/193)) ([287c910](https://github.com/ocean-ds/ocean-tokens/commit/287c910f004e5ac7d0105e6aa8a796994e128980))
+
 ## [3.1.3](https://github.com/ocean-ds/ocean-tokens/compare/v3.1.2...v3.1.3) (2021-11-09)
 
 
