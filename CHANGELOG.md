@@ -1,3 +1,10 @@
+## [3.1.10](https://github.com/ocean-ds/ocean-tokens/compare/v3.1.9...v3.1.10) (2022-02-10)
+
+
+### Bug Fixes
+
+* package.json & yarn.lock to reduce vulnerabilities ([#216](https://github.com/ocean-ds/ocean-tokens/issues/216)) ([c119518](https://github.com/ocean-ds/ocean-tokens/commit/c11951887d1718ebb01b5adb8000afda3a1f8061))
+
 ## [3.1.9](https://github.com/ocean-ds/ocean-tokens/compare/v3.1.8...v3.1.9) (2022-02-10)
 
 
