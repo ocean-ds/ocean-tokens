@@ -1,6 +1,6 @@
 {
   "name": "@useblu/ocean-tokens",
-  "version": "3.1.4",
+  "version": "3.1.7",
   "private": false,
   "description": "Design Tokens for the Ocean Design System",
   "scripts": {
@@ -36,7 +36,7 @@
     "eslint": "^7.28.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-config-standard": "^16.0.3",
-    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-import": "^2.25.3",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-promise": "^5.2.0",
@@ -52,9 +52,9 @@
     "immutable": "^4.0.0",
     "is-ci": "^3.0.0",
     "lodash": "^4.17.21",
-    "prettier": "^2.4.0",
-    "pretty-quick": "^3.1.0",
-    "semantic-release": "^18.0.0",
+    "prettier": "^2.5.0",
+    "pretty-quick": "^3.1.2",
+    "semantic-release": "^18.0.1",
     "theo": "^8.1.5",
     "through2": "^4.0.2",
     "vinyl": "^2.2.1"
