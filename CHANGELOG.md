@@ -1,3 +1,10 @@
+## [3.1.7](https://github.com/ocean-ds/ocean-tokens/compare/v3.1.6...v3.1.7) (2022-02-10)
+
+
+### Bug Fixes
+
+* upgrade semantic-release from 18.0.0 to 18.0.1 ([#207](https://github.com/ocean-ds/ocean-tokens/issues/207)) ([4aa2701](https://github.com/ocean-ds/ocean-tokens/commit/4aa27018f5aa404c740894aa102c3150b5a81e5f))
+
 ## [3.1.6](https://github.com/ocean-ds/ocean-tokens/compare/v3.1.5...v3.1.6) (2022-02-10)
 
 
