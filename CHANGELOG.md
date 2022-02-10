@@ -1,3 +1,24 @@
+## [3.1.7](https://github.com/ocean-ds/ocean-tokens/compare/v3.1.6...v3.1.7) (2022-02-10)
+
+
+### Bug Fixes
+
+* upgrade semantic-release from 18.0.0 to 18.0.1 ([#207](https://github.com/ocean-ds/ocean-tokens/issues/207)) ([4aa2701](https://github.com/ocean-ds/ocean-tokens/commit/4aa27018f5aa404c740894aa102c3150b5a81e5f))
+
+## [3.1.6](https://github.com/ocean-ds/ocean-tokens/compare/v3.1.5...v3.1.6) (2022-02-10)
+
+
+### Bug Fixes
+
+* upgrade pretty-quick from 3.1.1 to 3.1.2 ([#206](https://github.com/ocean-ds/ocean-tokens/issues/206)) ([bd5a695](https://github.com/ocean-ds/ocean-tokens/commit/bd5a695f688890a421eef711295afa287966ac36))
+
+## [3.1.5](https://github.com/ocean-ds/ocean-tokens/compare/v3.1.4...v3.1.5) (2022-02-10)
+
+
+### Bug Fixes
+
+* upgrade eslint-plugin-import from 2.25.2 to 2.25.3 ([#204](https://github.com/ocean-ds/ocean-tokens/issues/204)) ([6819308](https://github.com/ocean-ds/ocean-tokens/commit/681930817c07d7b93735b18509c53ae436ad72f3))
+
 ## [3.1.4](https://github.com/ocean-ds/ocean-tokens/compare/v3.1.3...v3.1.4) (2021-11-09)
 
 
