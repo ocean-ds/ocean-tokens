@@ -37,5 +37,5 @@ props:
     category: spacing
 
   - name: spacing-stack-xxxl
-    value: 200px
+    value: 180px
     category: spacing
