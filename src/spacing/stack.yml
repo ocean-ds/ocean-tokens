@@ -21,21 +21,21 @@ props:
     category: spacing
 
   - name: spacing-stack-md
-    value: 40px
+    value: 32px
     category: spacing
 
   - name: spacing-stack-lg
-    value: 64px
+    value: 40px
     category: spacing
 
   - name: spacing-stack-xl
-    value: 80px
+    value: 48px
     category: spacing
 
   - name: spacing-stack-xxl
-    value: 128px
+    value: 64px
     category: spacing
 
   - name: spacing-stack-xxxl
-    value: 200px
+    value: 80px
     category: spacing
