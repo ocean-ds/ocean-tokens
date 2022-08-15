@@ -1,3 +1,10 @@
+# [3.2.0](https://github.com/ocean-ds/ocean-tokens/compare/v3.1.11...v3.2.0) (2022-08-15)
+
+
+### Features
+
+* changed spacing stacks tokens ([#251](https://github.com/ocean-ds/ocean-tokens/issues/251)) ([cc19874](https://github.com/ocean-ds/ocean-tokens/commit/cc198745f0405179a10e5d43d87775d6f9c56c18))
+
 ## [3.1.11](https://github.com/ocean-ds/ocean-tokens/compare/v3.1.10...v3.1.11) (2022-04-14)
 
 
