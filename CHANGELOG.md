@@ -1,3 +1,10 @@
+# [3.3.0](https://github.com/ocean-ds/ocean-tokens/compare/v3.2.0...v3.3.0) (2022-08-15)
+
+
+### Features
+
+* upgrade eslint-plugin-promise from 5.2.0 to 6.0.0 ([#222](https://github.com/ocean-ds/ocean-tokens/issues/222)) ([a9c08f2](https://github.com/ocean-ds/ocean-tokens/commit/a9c08f2485caf33a5028d78d358cc118ef5ea0e1))
+
 # [3.2.0](https://github.com/ocean-ds/ocean-tokens/compare/v3.1.11...v3.2.0) (2022-08-15)
 
 
