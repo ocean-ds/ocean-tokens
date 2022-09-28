@@ -42,13 +42,13 @@ This project powered by [Theo](https://github.com/salesforce-ux/theo) provides d
 ## Installation
 
 ```sh
-yarn add @useblu/ocean-icons-react
+yarn add @useblu/ocean-tokens
 ```
 
 or
 
 ```sh
-npm i @useblu/ocean-icons-react
+npm i @useblu/ocean-tokens
 ```
 
 ## Usage
@@ -63,7 +63,7 @@ import {
   fontWeightExtrabold,
   lineHeightMedium,
   colorInterfaceLightPure,
-} from '@useblu/ocean-tokens/web/tokens.module.js';
+} from '@useblu/ocean-tokens/web/tokens';
 
 export const Heading1 = styled.h1`
   font-family: ${fontFamilyHighlight};
