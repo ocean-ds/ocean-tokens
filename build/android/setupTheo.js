@@ -1,3 +1,4 @@
+const formatToXML = require('./formatToXML');
 const theoReplaceAll = require('../utils/theoReplaceAll');
 
 module.exports = (theo) => {
@@ -46,5 +47,5 @@ module.exports = (theo) => {
     'android-radius-dp',
   ]);
 
-  theo.registerFormat('xml', require('./formatToXML'));
+  theo.registerFormat('xml', formatToXML);
 };

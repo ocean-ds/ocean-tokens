@@ -18,10 +18,10 @@ module.exports = (def) => {
       const n = v.search('%');
       if (n > -1) {
         v = v.replace('%', '');
-        if (isNaN(v) == false) v = v / 100;
+        if (Number.isNaN(v) == false) v /= 100;
       }
 
-      if (isNaN(v)) v = JSON.stringify(v);
+      if (Number.isNaN(v)) v = JSON.stringify(v);
 
       const isFontWeight = k.search('fontWeight');
       const isFontFamily = k.search('fontFamily');
@@ -50,22 +50,17 @@ module.exports = (def) => {
           'Heavy',
           'Black',
         ];
-        for (let i = weightKeys.length - 1; i >= 0; i--) {
+        for (let i = weightKeys.length - 1; i >= 0; i -= 1) {
           const keyWeight = k + weightKeys[i];
+          const baseValue = prop.get('value').replace(/\s/g, '');
 
           if (k == 'fontFamilyBase') {
-            const fontFamilyWithWeight =
-              prop.get('value').replace(/\s/g, '') +
-              '-' +
-              fontFamilyBaseWeightValues[i];
+            const fontFamilyWithWeight = `${baseValue}-${fontFamilyBaseWeightValues[i]}`;
             result = result.push(
               `  "${keyWeight}": "${fontFamilyWithWeight}",`
             );
           } else {
-            const fontFamilyWithWeight =
-              prop.get('value').replace(/\s/g, '') +
-              '-' +
-              fontFamilyHighlightWeightValues[i];
+            const fontFamilyWithWeight = `${baseValue}-${fontFamilyHighlightWeightValues[i]}`;
             result = result.push(
               `  "${keyWeight}": "${fontFamilyWithWeight}",`
             );
