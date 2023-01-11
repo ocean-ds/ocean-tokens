@@ -1,8 +1,9 @@
 const theoReplaceAll = require('../utils/theoReplaceAll');
+const formatToJSON = require('./formatToJSON');
 
 function convertToMap(str) {
-  str = str.replace('rgba(', '').replace(')', '');
-  const res = str.split(' ');
+  const strReplaced = str.replace('rgba(', '').replace(')', '');
+  const res = strReplaced.split(' ');
   const prefix = [
     '"x":',
     ', "y":',
@@ -13,10 +14,10 @@ function convertToMap(str) {
     '"alpha":',
   ];
   let text = '';
-  for (let i = 0; i < res.length; i++) {
-    text += prefix[i] + ' ' + res[i];
+  for (let i = 0; i < res.length; i += 1) {
+    text += `${prefix[i]} ${res[i]}`;
   }
-  text = '[' + text + ']';
+  text = `[${text}]`;
   return text;
 }
 
@@ -39,5 +40,5 @@ module.exports = (theo) => {
 
   theo.registerTransform('ios', ['ios-convert-to-map', 'ios-remove-pixel']);
 
-  theo.registerFormat('json', require('./formatToJSON'));
+  theo.registerFormat('json', formatToJSON);
 };

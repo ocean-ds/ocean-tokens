@@ -1,3 +1,4 @@
+const formatToXML = require('./formatToXML');
 const theoReplaceAll = require('../utils/theoReplaceAll');
 
 module.exports = (theo) => {
@@ -5,26 +6,38 @@ module.exports = (theo) => {
     'android-font-size-sp',
     (prop) =>
       prop.get('type') === 'size' && prop.get('category') === 'font-size',
-    (prop) => theoReplaceAll(`${prop.get('value')}`, 'px', '') + 'sp'
+    (prop) => {
+      const replacedValue = theoReplaceAll(`${prop.get('value')}`, 'px', '');
+      return `${replacedValue}sp`;
+    }
   );
 
   theo.registerValueTransform(
     'android-border-width-dp',
     (prop) =>
       prop.get('type') === 'unit' && prop.get('category') === 'border-width',
-    (prop) => theoReplaceAll(`${prop.get('value')}`, 'px', '') + 'dp'
+    (prop) => {
+      const replacedValue = theoReplaceAll(`${prop.get('value')}`, 'px', '');
+      return `${replacedValue}dp`;
+    }
   );
 
   theo.registerValueTransform(
     'android-spacing-dp',
     (prop) => prop.get('type') === 'unit' && prop.get('category') === 'spacing',
-    (prop) => theoReplaceAll(`${prop.get('value')}`, 'px', '') + 'dp'
+    (prop) => {
+      const replacedValue = theoReplaceAll(`${prop.get('value')}`, 'px', '');
+      return `${replacedValue}dp`;
+    }
   );
 
   theo.registerValueTransform(
     'android-radius-dp',
     (prop) => prop.get('type') === 'unit' && prop.get('category') === 'radius',
-    (prop) => theoReplaceAll(`${prop.get('value')}`, 'px', '') + 'dp'
+    (prop) => {
+      const replacedValue = theoReplaceAll(`${prop.get('value')}`, 'px', '');
+      return `${replacedValue}dp`;
+    }
   );
 
   theo.registerTransform('android', [
@@ -34,5 +47,5 @@ module.exports = (theo) => {
     'android-radius-dp',
   ]);
 
-  theo.registerFormat('xml', require('./formatToXML'));
+  theo.registerFormat('xml', formatToXML);
 };
