@@ -18,7 +18,7 @@ gulp.task('build:doc:set-base-url', () =>
   gulp
     .src('static/index.html')
     .pipe(
-      $.dom(() => {
+      $.dom(function setUrl() {
         const header = this.querySelector('head');
         const base = this.createElement('base');
         base.href = 'https://ocean-ds.github.io/ocean-tokens/';
