@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - master
-      - next
 
 jobs:
   release:
@@ -19,6 +18,9 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: '14.x'
+
+      - name: Authenticate with Registry
+        run: npm whoami
 
       - name: Get yarn cache directory path
         id: yarn-cache-dir-path
@@ -39,7 +41,14 @@ jobs:
         run: yarn build
 
       - name: Creates a release if necessary
-        run: npx semantic-release
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          OLD_PACKAGE_VERSION=$(echo $(git show HEAD~1:package.json) | jq '.version')
+          NEW_PACKAGE_VERSION=$(node -pe 'require("./package.json").version')
+
+          if [ "$NEW_PACKAGE_VERSION" != "$OLD_PACKAGE_VERSION" ]; then
+            printf "Changed version [%s]\n" "$NEW_PACKAGE_VERSION"
+
+            npm publish --access public
+          fi
