@@ -34,7 +34,7 @@ props:
   - name: color-status-warning-pure
     value: '{!color-status-warning-pure}'
     meta:
-      friendlyName: Color Status StatusWarning Pure
+      friendlyName: Color Status warning Pure
     category: background-color
 
   - name: color-status-warning-up
