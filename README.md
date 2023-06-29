@@ -32,7 +32,7 @@
   </a>
   <a href="https://discord.gg/hDWzGPKuG2">
     <img alt="Discord Server" src="https://img.shields.io/discord/875438252172136468.svg?color=7389D8&labelColor=6A7EC2&logo=discord&logoColor=ffffff">
-  </a>  
+  </a>
 </p>
 
 This project powered by [Theo](https://github.com/salesforce-ux/theo) provides design tokens to the [Ocean](https://zeroheight.com/9c9b2b3aa/p/257272-ocean-ds/t/968532) design system.
@@ -87,6 +87,17 @@ export const Heading1 = styled.h1`
   color: $color-interface-light-pure;
 }
 ```
+
+## Versioning
+
+This package uses (Semantic Release)[https://github.com/semantic-release/semantic-release] for versioning and distributing to NPM.
+It analyses commits since last version to generate or not a new version. Use the follow commit prefixes to bump versions:
+
+`fix:` Generates patch versions
+`feat:` Generates minor versions
+`BREAKING CHANGES:` Generate major versions
+
+Other prefix commits (like `chore:`) will be ignored!
 
 ## Contributing
 
