@@ -1,3 +1,10 @@
+## [3.3.1](https://github.com/ocean-ds/ocean-tokens/compare/v3.3.0...v3.3.1) (2023-06-29)
+
+
+### Bug Fixes
+
+* revert package version ([#281](https://github.com/ocean-ds/ocean-tokens/issues/281)) ([2dc924f](https://github.com/ocean-ds/ocean-tokens/commit/2dc924fb16bdc5b9c646a1e0cbd5e7c861879786))
+
 # [3.3.0](https://github.com/ocean-ds/ocean-tokens/compare/v3.2.0...v3.3.0) (2022-08-15)
 
 
