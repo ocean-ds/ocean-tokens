@@ -8,8 +8,3 @@ props:
     value: Nunito Sans
     type: string
     category: font-family
-
-  - name: font-family-highlight
-    value: Avenir
-    type: string
-    category: font-family

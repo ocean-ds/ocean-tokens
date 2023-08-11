@@ -12,12 +12,16 @@ props:
     value: 0 4px 8px rgba(12, 13, 20, {!opacity-level-semitransparent})
     category: box-shadow
 
-  - name: shadow-level-2
+  - name: shadow-level-2-bottom
+    value: 0 8px 16px rgba(12, 13, 20, {!opacity-level-semitransparent})
+    category: box-shadow
+
+  - name: shadow-level-2-top
     value: 0 8px 16px rgba(12, 13, 20, {!opacity-level-semitransparent})
     category: box-shadow
 
   - name: shadow-level-3
-    value: 0 16px 32px rgba(12, 13, 20, {!opacity-level-semitransparent})
+    value: 0px -8px 16px 0px rgba(12, 13, 20, {!opacity-level-semitransparent})
     category: box-shadow
 
   - name: shadow-level-4
