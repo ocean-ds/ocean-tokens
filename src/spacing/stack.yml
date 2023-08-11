@@ -13,7 +13,7 @@ props:
     category: spacing
 
   - name: spacing-stack-xs
-    value: 16px
+    value: 12px
     category: spacing
 
   - name: spacing-stack-sm
