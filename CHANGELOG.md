@@ -1,3 +1,10 @@
+# [3.5.0](https://github.com/ocean-ds/ocean-tokens/compare/v3.4.0...v3.5.0) (2024-04-18)
+
+
+### Features
+
+* update tokens ([#287](https://github.com/ocean-ds/ocean-tokens/issues/287)) ([bf6f462](https://github.com/ocean-ds/ocean-tokens/commit/bf6f462a4a46a78a9ea45ab571ff86eff1ad3f0c))
+
 # [3.4.0](https://github.com/ocean-ds/ocean-tokens/compare/v3.3.1...v3.4.0) (2024-01-22)
 
 
