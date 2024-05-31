@@ -1,3 +1,10 @@
+# [3.6.0](https://github.com/ocean-ds/ocean-tokens/compare/v3.5.0...v3.6.0) (2024-05-31)
+
+
+### Features
+
+* create step to generate sourcemaps ([#290](https://github.com/ocean-ds/ocean-tokens/issues/290)) ([72f3f35](https://github.com/ocean-ds/ocean-tokens/commit/72f3f35310707ac51ac55684b2f8b02864bdc97c))
+
 # [3.5.0](https://github.com/ocean-ds/ocean-tokens/compare/v3.4.0...v3.5.0) (2024-04-18)
 
 
