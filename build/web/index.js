@@ -37,7 +37,7 @@ gulp.task('build:web:ts', () =>
         noImplicitAny: true,
         removeComments: true,
         preserveConstEnums: true,
-        module: 'system',
+        module: 'amd',
         declaration: true,
         allowJs: true,
       })
