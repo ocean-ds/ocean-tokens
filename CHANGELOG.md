@@ -1,3 +1,10 @@
+## [3.6.1](https://github.com/ocean-ds/ocean-tokens/compare/v3.6.0...v3.6.1) (2024-05-31)
+
+
+### Bug Fixes
+
+* adjust module type ([#291](https://github.com/ocean-ds/ocean-tokens/issues/291)) ([0b9a55c](https://github.com/ocean-ds/ocean-tokens/commit/0b9a55c0200bce233a7e5867423f14c568c2b456))
+
 # [3.6.0](https://github.com/ocean-ds/ocean-tokens/compare/v3.5.0...v3.6.0) (2024-05-31)
 
 ### Features
