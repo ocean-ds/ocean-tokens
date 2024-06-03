@@ -12,6 +12,10 @@ props:
     value: 8px
     category: spacing
 
+  - name: spacing-stack-xxs-extra
+    value: 12px
+    category: spacing
+
   - name: spacing-stack-xs
     value: 16px
     category: spacing
