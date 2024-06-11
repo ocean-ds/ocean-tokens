@@ -1,3 +1,10 @@
+# [3.7.0](https://github.com/ocean-ds/ocean-tokens/compare/v3.6.2...v3.7.0) (2024-06-11)
+
+
+### Features
+
+* create spacing xxs extra ([#293](https://github.com/ocean-ds/ocean-tokens/issues/293)) ([ec41e40](https://github.com/ocean-ds/ocean-tokens/commit/ec41e40c458708cfe529da79929e33c92bc27622))
+
 ## [3.6.2](https://github.com/ocean-ds/ocean-tokens/compare/v3.6.1...v3.6.2) (2024-06-03)
 
 
