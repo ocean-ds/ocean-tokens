@@ -13,7 +13,7 @@ props:
     category: spacing
 
   - name: spacing-squish-md
-    value: 12px 24px
+    value: 16px 24px
     category: spacing
 
   - name: spacing-squish-lg
