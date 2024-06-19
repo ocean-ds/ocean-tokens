@@ -7,17 +7,20 @@ props:
   - name: border-radius-none
     value: 0
 
-  - name: border-radius-sm
+  - name: border-radius-tiny
     value: '4px'
 
-  - name: border-radius-md
+  - name: border-radius-sm
     value: '8px'
+
+  - name: border-radius-md
+    value: '12px'
 
   - name: border-radius-lg
     value: '16px'
 
   - name: border-radius-pill
-    value: '500px'
+    value: '56px'
 
   - name: border-radius-circular
     value: '50%'
