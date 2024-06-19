@@ -1,6 +1,6 @@
 {
   "name": "@useblu/ocean-tokens",
-  "version": "3.4.0",
+  "version": "3.7.0",
   "private": false,
   "description": "Design Tokens for the Ocean Design System",
   "scripts": {
@@ -30,6 +30,8 @@
     "gulp": "^4.0.2",
     "gulp-dom": "^1.0.0",
     "gulp-load-plugins": "^2.0.7",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-typescript": "^5.0.1",
     "immutable": "^4.0.0",
     "lodash": "^4.17.21",
     "theo": "^8.1.5",
@@ -58,6 +60,7 @@
     "gulp-util": "^3.0.8",
     "husky": "^7.0.0",
     "is-ci": "^3.0.0",
+    "postcss": "8.4.31",
     "prettier": "^2.5.0",
     "pretty-quick": "^3.1.2",
     "semantic-release": "^19.0.0"
