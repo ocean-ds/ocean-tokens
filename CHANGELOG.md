@@ -1,3 +1,10 @@
+# [3.8.0](https://github.com/ocean-ds/ocean-tokens/compare/v3.7.0...v3.8.0) (2024-06-20)
+
+
+### Features
+
+* trigger release ([#295](https://github.com/ocean-ds/ocean-tokens/issues/295)) ([3a0385f](https://github.com/ocean-ds/ocean-tokens/commit/3a0385f56d4174567a72c741989e4a90c02b7da5))
+
 # [3.7.0](https://github.com/ocean-ds/ocean-tokens/compare/v3.6.2...v3.7.0) (2024-06-11)
 
 
