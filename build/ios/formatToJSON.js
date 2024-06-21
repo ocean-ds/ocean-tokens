@@ -1,4 +1,4 @@
-/* eslint-disable eqeqeq */
+/* eslint-disable */
 const Immutable = require('immutable');
 const _ = require('lodash');
 
@@ -21,7 +21,6 @@ module.exports = (def) => {
         if (Number.isNaN(v) == false) v /= 100;
       }
 
-      /* eslint eqeqeq: 0 */
       if (isNaN(v)) v = JSON.stringify(v);
 
       const isFontWeight = k.search('fontWeight');
