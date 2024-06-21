@@ -21,7 +21,7 @@ module.exports = (def) => {
         if (Number.isNaN(v) == false) v /= 100;
       }
 
-      if (Number.isNaN(v)) v = JSON.stringify(v);
+      if (isNaN(v)) v = JSON.stringify(v);
 
       const isFontWeight = k.search('fontWeight');
       const isFontFamily = k.search('fontFamily');
