@@ -21,8 +21,9 @@ module.exports = (def) => {
         if (Number.isNaN(v) == false) v /= 100;
       }
 
-      // eslint-disable-next-line no-use-before-define
+      /* eslint-disable */
       if (isNaN(v)) v = JSON.stringify(v);
+      /* eslint-enable */
 
       const isFontWeight = k.search('fontWeight');
       const isFontFamily = k.search('fontFamily');
