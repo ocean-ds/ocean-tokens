@@ -1,3 +1,10 @@
+## [3.8.1](https://github.com/ocean-ds/ocean-tokens/compare/v3.8.0...v3.8.1) (2024-07-08)
+
+
+### Bug Fixes
+
+* json ios generator ([#296](https://github.com/ocean-ds/ocean-tokens/issues/296)) ([28f6619](https://github.com/ocean-ds/ocean-tokens/commit/28f6619cc88158c5b93a217d875315e96663f603))
+
 # [3.8.0](https://github.com/ocean-ds/ocean-tokens/compare/v3.7.0...v3.8.0) (2024-06-20)
 
 
