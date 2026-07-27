@@ -1,3 +1,10 @@
+## [3.8.2](https://github.com/ocean-ds/ocean-tokens/compare/v3.8.1...v3.8.2) (2026-07-27)
+
+
+### Bug Fixes
+
+* **typography:** família Highlight passa de Avenir para Nunito Sans ([#299](https://github.com/ocean-ds/ocean-tokens/issues/299)) ([f61ef16](https://github.com/ocean-ds/ocean-tokens/commit/f61ef1670e53f73d2749a53b464a56c2875e8a9f)), closes [ocean-ios#697](https://github.com/ocean-ios/issues/697)
+
 ## [3.8.1](https://github.com/ocean-ds/ocean-tokens/compare/v3.8.0...v3.8.1) (2024-07-08)
 
 
