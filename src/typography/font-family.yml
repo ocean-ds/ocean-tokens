@@ -10,6 +10,6 @@ props:
     category: font-family
 
   - name: font-family-highlight
-    value: Avenir
+    value: Nunito Sans
     type: string
     category: font-family

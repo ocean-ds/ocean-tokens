@@ -43,12 +43,17 @@ module.exports = (def) => {
           'Bold',
           'ExtraBold',
         ];
+        // A família Highlight deixou de ser Avenir e passou a ser Nunito Sans, então os
+        // sufixos de peso precisam seguir a nomenclatura do Nunito Sans — os antigos
+        // (Roman/Heavy/Black) são nomes de Avenir e gerariam arquivos inexistentes.
+        // Os dois arrays estão idênticos de propósito: as duas famílias apontam para a
+        // mesma fonte hoje. Colapsar ou depreciar os tokens Highlight é decisão separada.
         const fontFamilyHighlightWeightValues = [
           'Light',
-          'Roman',
-          'Medium',
-          'Heavy',
-          'Black',
+          'Regular',
+          'SemiBold',
+          'Bold',
+          'ExtraBold',
         ];
         for (let i = weightKeys.length - 1; i >= 0; i -= 1) {
           const keyWeight = k + weightKeys[i];
