@@ -1,5 +1,12 @@
 name: CD
 
+# WARNING: GitHub scans the ENTIRE head-commit message of a push — title AND body —
+# for CI-skip markers. A commit that merely QUOTES such a marker (for example, when
+# describing another commit in the body) will silently suppress this workflow, and no
+# release will be published. This already happened once: PR #299 was merged and nothing
+# was released because its squashed body quoted a marker verbatim.
+# When writing commits that reference those markers, paraphrase them instead.
+
 on:
   push:
     branches:
