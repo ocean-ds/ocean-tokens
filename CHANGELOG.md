@@ -1,3 +1,10 @@
+# [3.9.0](https://github.com/ocean-ds/ocean-tokens/compare/v3.8.2...v3.9.0) (2026-11-03)
+
+
+### Features
+
+* **android:** generate border-width and opacity tokens ([#302](https://github.com/ocean-ds/ocean-tokens/issues/302)) ([9985283](https://github.com/ocean-ds/ocean-tokens/commit/99852839568fdafa9953dbfaaa78ac929610c8cc))
+
 ## [3.8.2](https://github.com/ocean-ds/ocean-tokens/compare/v3.8.1...v3.8.2) (2026-07-27)
 
 
