@@ -1,7 +1,7 @@
 ---
 global:
   type: unit
-  category: radius
+  category: border-width
 
 props:
   - name: border-width-none

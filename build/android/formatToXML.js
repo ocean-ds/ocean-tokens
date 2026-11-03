@@ -5,7 +5,6 @@ const discardedCategories = [
   'font-weight',
   'font-family',
   'box-shadow',
-  'opacity',
   'radius',
 ];
 
@@ -15,6 +14,27 @@ module.exports = (def) => {
       .get('props')
       .filter((prop) => !discardedCategories.includes(prop.get('category')))
       .map((prop) => {
+        const name = _.toLower(`ocean_${prop.get('name')}`).replace(
+          /[-]/g,
+          '_'
+        );
+
+        if (prop.get('category') === 'opacity') {
+          return {
+            item: [
+              {
+                _attr: {
+                  name,
+                  type: 'dimen',
+                  format: 'float',
+                  category: prop.get('category'),
+                },
+              },
+              prop.get('value'),
+            ],
+          };
+        }
+
         const key = (() => {
           const newLocal = prop.get('type');
           switch (newLocal) {
@@ -35,10 +55,7 @@ module.exports = (def) => {
           [key]: [
             {
               _attr: {
-                name: _.toLower(`ocean_${prop.get('name')}`).replace(
-                  /[-]/g,
-                  '_'
-                ),
+                name,
                 category: prop.get('category'),
               },
             },
