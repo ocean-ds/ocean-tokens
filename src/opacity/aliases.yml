@@ -7,5 +7,6 @@ aliases:
   opacity-level-semiopaque: .80
   opacity-level-intense: .64
   opacity-level-medium: .40
+  opacity-level-soft: .24
   opacity-level-light: .16
   opacity-level-semitransparent: .08

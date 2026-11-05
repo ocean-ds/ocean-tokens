@@ -23,3 +23,8 @@ props:
   - name: font-weight-extrabold
     value: 800
     category: font-weight
+
+  - name: font-weight-black
+    value: 900
+    category: font-weight
+    export-mobile: true

@@ -3,6 +3,12 @@ const theoReplaceAll = require('../utils/theoReplaceAll');
 
 module.exports = (theo) => {
   theo.registerValueTransform(
+    'android-letter-spacing-em',
+    (prop) => prop.get('category') === 'letter-spacing',
+    (prop) => `${prop.get('value')}`.replace(/em$/, '')
+  );
+
+  theo.registerValueTransform(
     'android-font-size-sp',
     (prop) =>
       prop.get('type') === 'size' && prop.get('category') === 'font-size',
@@ -41,6 +47,7 @@ module.exports = (theo) => {
   );
 
   theo.registerTransform('android', [
+    'android-letter-spacing-em',
     'android-font-size-sp',
     'android-border-width-dp',
     'android-spacing-dp',

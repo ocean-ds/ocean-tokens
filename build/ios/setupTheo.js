@@ -23,6 +23,12 @@ function convertToMap(str) {
 
 module.exports = (theo) => {
   theo.registerValueTransform(
+    'ios-letter-spacing-em',
+    (prop) => prop.get('category') === 'letter-spacing',
+    (prop) => `${prop.get('value')}`.replace(/em$/, '')
+  );
+
+  theo.registerValueTransform(
     'ios-convert-to-map',
     (prop) => prop.get('type') === 'shadow',
     (prop) => convertToMap(`${prop.get('value')}`)
@@ -33,12 +39,17 @@ module.exports = (theo) => {
     (prop) =>
       prop.get('type') === 'unit' ||
       prop.get('type') === 'number' ||
+      prop.get('type') === 'float' ||
       prop.get('type') === 'size' ||
       prop.get('type') === 'shadow',
     (prop) => theoReplaceAll(`${prop.get('value')}`, 'px', '')
   );
 
-  theo.registerTransform('ios', ['ios-convert-to-map', 'ios-remove-pixel']);
+  theo.registerTransform('ios', [
+    'ios-convert-to-map',
+    'ios-remove-pixel',
+    'ios-letter-spacing-em',
+  ]);
 
   theo.registerFormat('json', formatToJSON);
 };

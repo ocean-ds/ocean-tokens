@@ -1,0 +1,8 @@
+---
+global:
+  type: unit
+  category: letter-spacing
+
+props:
+  - name: letter-spacing-wide
+    value: 0.18em
