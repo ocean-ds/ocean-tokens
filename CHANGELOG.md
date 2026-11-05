@@ -1,3 +1,10 @@
+# [3.10.0](https://github.com/ocean-ds/ocean-tokens/compare/v3.9.0...v3.10.0) (2026-11-05)
+
+
+### Features
+
+* **tokens:** extend opacity and typography scales ([#303](https://github.com/ocean-ds/ocean-tokens/issues/303)) ([fe8dd65](https://github.com/ocean-ds/ocean-tokens/commit/fe8dd65a8af495e6e9ba1d7c1aedf7523d54dd72))
+
 # [3.9.0](https://github.com/ocean-ds/ocean-tokens/compare/v3.8.2...v3.9.0) (2026-11-03)
 
 
