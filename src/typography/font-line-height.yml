@@ -7,6 +7,11 @@ global:
   category: typography
 
 props:
+  - name: line-height-extra-tight
+    value: 0.8
+    type: float
+    category: font-line-height
+
   - name: line-height-tight
     value: 1
     category: font-line-height
@@ -21,4 +26,9 @@ props:
 
   - name: line-height-comfy
     value: 1.5
+    category: font-line-height
+
+  - name: line-height-extra-comfy
+    value: 1.6
+    type: float
     category: font-line-height

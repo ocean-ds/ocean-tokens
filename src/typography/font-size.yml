@@ -4,6 +4,10 @@ global:
   category: typography
 
 props:
+  - name: font-size-xxxxs
+    value: 10px
+    category: font-size
+
   - name: font-size-xxxs
     value: 12px
     category: font-size

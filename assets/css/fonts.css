@@ -39,6 +39,14 @@
   src: local('Nunito Sans ExtraBold'), local('NunitoSans-ExtraBold'),
     url('../fonts/NunitoSans/NunitoSans-ExtraBold.woff2') format('woff2');
 }
+@font-face {
+  font-family: 'Nunito Sans';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: local('Nunito Sans Black'), local('NunitoSans-Black'),
+    url('../fonts/NunitoSans/NunitoSans-Black.woff2') format('woff2');
+}
 /********** Avenir *********/
 @font-face {
   font-family: 'Avenir';

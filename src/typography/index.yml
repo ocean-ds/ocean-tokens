@@ -8,3 +8,4 @@ imports:
   - ./font-line-height.yml
   - ./font-size.yml
   - ./font-weight.yml
+  - ./letter-spacing.yml

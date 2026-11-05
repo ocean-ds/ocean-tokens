@@ -25,7 +25,10 @@ module.exports = (def) => {
 
       const isFontWeight = k.search('fontWeight');
       const isFontFamily = k.search('fontFamily');
-      if (isFontWeight == -1 && isFontFamily == -1) {
+      if (
+        (isFontWeight == -1 || prop.get('export-mobile') === true) &&
+        isFontFamily == -1
+      ) {
         result = result.push(`  "${k}": ${v},`);
       }
       if (prop.get('category') == 'font-family') {
@@ -35,6 +38,7 @@ module.exports = (def) => {
           'WeightMedium',
           'WeightBold',
           'WeightExtraBold',
+          'WeightBlack',
         ];
         const fontFamilyBaseWeightValues = [
           'Light',
@@ -42,6 +46,7 @@ module.exports = (def) => {
           'SemiBold',
           'Bold',
           'ExtraBold',
+          'Black',
         ];
         // The Highlight family is no longer Avenir and is now Nunito Sans, so the
         // weight suffixes must follow Nunito Sans naming — the old ones
@@ -55,6 +60,7 @@ module.exports = (def) => {
           'SemiBold',
           'Bold',
           'ExtraBold',
+          'Black',
         ];
         for (let i = weightKeys.length - 1; i >= 0; i -= 1) {
           const keyWeight = k + weightKeys[i];

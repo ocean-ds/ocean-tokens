@@ -12,14 +12,21 @@ module.exports = (def) => {
   const o = {
     resources: def
       .get('props')
-      .filter((prop) => !discardedCategories.includes(prop.get('category')))
+      .filter(
+        (prop) =>
+          !discardedCategories.includes(prop.get('category')) ||
+          prop.get('export-mobile') === true
+      )
       .map((prop) => {
         const name = _.toLower(`ocean_${prop.get('name')}`).replace(
           /[-]/g,
           '_'
         );
 
-        if (prop.get('category') === 'opacity') {
+        if (
+          prop.get('type') === 'float' ||
+          ['opacity', 'letter-spacing'].includes(prop.get('category'))
+        ) {
           return {
             item: [
               {

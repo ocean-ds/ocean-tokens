@@ -90,6 +90,32 @@ export const Heading1 = styled.h1`
 
 ## Versioning
 
+### Extended scales
+
+| Token                     | Web    | Android / iOS |
+| ------------------------- | ------ | ------------- |
+| `opacity-level-soft`      | 0.24   | 0.24          |
+| `font-size-xxxxs`         | 10px   | 10sp / 10     |
+| `line-height-extra-tight` | 0.8    | 0.8           |
+| `line-height-extra-comfy` | 1.6    | 1.6           |
+| `font-weight-black`       | 900    | 900           |
+| `letter-spacing-wide`     | 0.18em | 0.18          |
+
+Line heights are multipliers: at 10px they produce 8px and 16px.
+Letter spacing is relative to font size (18%): Android can use the factor
+as `TextView.letterSpacing`; iOS must multiply it by the font point size
+when applying `kern` or `tracking` (1.8pt at 10pt).
+Android emits the new ratios as float resources, not physical dimensions.
+New font weights opt into numeric mobile exports with `export-mobile: true`,
+leaving legacy font-weight exports unchanged. iOS also exports
+`fontFamilyBaseWeightBlack` and `fontFamilyHighlightWeightBlack`.
+
+The added `NunitoSans-Black.ttf` is the upstream static version 2.001 from
+[Google Fonts](https://github.com/google/fonts/tree/883d271fd2240d1b6ace41532f7d7878384d6714/ofl/nunitosans).
+`NunitoSans-Black.woff2` is compressed from that TTF using FontTools.
+Both identify as `NunitoSans-Black`, weight 900. Their SIL Open Font License
+is included in `assets/fonts/NunitoSans/OFL.txt`. No existing fonts are replaced.
+
 This package uses (Semantic Release)[https://github.com/semantic-release/semantic-release] for versioning and distributing to NPM.
 It analyses commits since last version to generate or not a new version. Use the follow commit prefixes to bump versions:
 

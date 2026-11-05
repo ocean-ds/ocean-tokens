@@ -16,6 +16,9 @@ props:
   - name: opacity-level-medium
     value: '{!opacity-level-medium}'
 
+  - name: opacity-level-soft
+    value: '{!opacity-level-soft}'
+
   - name: opacity-level-light
     value: '{!opacity-level-light}'
 
