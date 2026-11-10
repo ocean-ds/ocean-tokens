@@ -1,3 +1,10 @@
+## [3.10.1](https://github.com/ocean-ds/ocean-tokens/compare/v3.10.0...v3.10.1) (2026-11-10)
+
+
+### Bug Fixes
+
+* **ios:** keep tokens-fontNames.json to font file names only ([#304](https://github.com/ocean-ds/ocean-tokens/issues/304)) ([8c20a3e](https://github.com/ocean-ds/ocean-tokens/commit/8c20a3e33e67bedc520a8340ca923a99e738ff34))
+
 # [3.10.0](https://github.com/ocean-ds/ocean-tokens/compare/v3.9.0...v3.10.0) (2026-11-05)
 
 
