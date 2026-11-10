@@ -22,7 +22,7 @@ def tokens(path):
         return dict(re.findall(r'^\$([^:]+): (.*);$', content, re.M))
     if path.suffix == '.ts':
         return dict(re.findall(r'^export (?:const|let) (\w+): (.*);$', content, re.M))
-    return dict(re.findall(r'^  "([^"]+)": (.*),$', content, re.M))
+    return dict(re.findall(r'^  "([^"]+)": (.*?),?$', content, re.M))
 
 
 before, after = map(Path, sys.argv[1:])
@@ -57,7 +57,7 @@ for old in sorted(before.rglob('*')):
         expected = {
             'tokens-color.json': set(), 'tokens-shadow.json': set(),
             'tokens-size.json': {'opacityLevelSoft'},
-            'tokens-fontNames.json': families | {'fontWeightBlack'},
+            'tokens-fontNames.json': families,
             'tokens-typography.json': (names - {'opacityLevelSoft'}) | families,
             'tokens.json': names | families,
         }[relative.name]

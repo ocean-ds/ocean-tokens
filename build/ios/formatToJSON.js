@@ -29,7 +29,7 @@ module.exports = (def) => {
         (isFontWeight == -1 || prop.get('export-mobile') === true) &&
         isFontFamily == -1
       ) {
-        result = result.push(`  "${k}": ${v},`);
+        result = result.push(`  "${k}": ${v}`);
       }
       if (prop.get('category') == 'font-family') {
         const weightKeys = [
@@ -68,14 +68,10 @@ module.exports = (def) => {
 
           if (k == 'fontFamilyBase') {
             const fontFamilyWithWeight = `${baseValue}-${fontFamilyBaseWeightValues[i]}`;
-            result = result.push(
-              `  "${keyWeight}": "${fontFamilyWithWeight}",`
-            );
+            result = result.push(`  "${keyWeight}": "${fontFamilyWithWeight}"`);
           } else {
             const fontFamilyWithWeight = `${baseValue}-${fontFamilyHighlightWeightValues[i]}`;
-            result = result.push(
-              `  "${keyWeight}": "${fontFamilyWithWeight}",`
-            );
+            result = result.push(`  "${keyWeight}": "${fontFamilyWithWeight}"`);
           }
         }
       }
@@ -84,6 +80,6 @@ module.exports = (def) => {
     })
     .flatten(1)
     .toArray()
-    .join('\n');
+    .join(',\n');
   return ['{', content, '}'].join('\n');
 };
