@@ -42,10 +42,7 @@ exports.build = gulp.parallel(
     buildCreator('src/shadow/index.yml', 'tokens-shadow.json')
   ),
   withName('build:ios:fontNames')(
-    buildCreator(
-      ['src/typography/font-family.yml', 'src/typography/font-weight.yml'],
-      'tokens-fontNames.json'
-    )
+    buildCreator('src/typography/font-family.yml', 'tokens-fontNames.json')
   ),
   withName('build:ios:all')(buildCreator(mobileGlobs, 'tokens.json'))
 );
