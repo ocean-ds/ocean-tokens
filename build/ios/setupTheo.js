@@ -46,6 +46,7 @@ module.exports = (theo) => {
   );
 
   theo.registerTransform('ios', [
+    'shadow-rgba',
     'ios-convert-to-map',
     'ios-remove-pixel',
     'ios-letter-spacing-em',

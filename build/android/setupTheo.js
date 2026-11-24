@@ -46,12 +46,27 @@ module.exports = (theo) => {
     }
   );
 
+  theo.registerValueTransform(
+    'android-shadow-dp',
+    (prop) => prop.get('category') === 'box-shadow',
+    (prop) => {
+      const parts = prop.get('value').replace(/px/g, 'dp').split(' ');
+      const offsetY = prop.get('android-shadow-offset-y');
+      if (offsetY !== undefined) {
+        parts[1] = `${offsetY}dp`;
+      }
+      return parts.join(' ');
+    }
+  );
+
   theo.registerTransform('android', [
     'android-letter-spacing-em',
     'android-font-size-sp',
     'android-border-width-dp',
     'android-spacing-dp',
     'android-radius-dp',
+    'shadow-rgba',
+    'android-shadow-dp',
   ]);
 
   theo.registerFormat('xml', formatToXML);
