@@ -51,6 +51,7 @@ module.exports = (def) => {
               return 'dimen';
             case 'number':
               return 'integer';
+            case 'shadow':
             case 'string':
               return 'string';
             default:

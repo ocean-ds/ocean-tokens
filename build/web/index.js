@@ -1,7 +1,10 @@
 const gulp = require('gulp');
 const sourcemaps = require('gulp-sourcemaps');
+const theo = require('theo');
 const typescript = require('gulp-typescript');
 const $ = require('gulp-load-plugins')();
+
+theo.registerTransform('web', ['color/rgb', 'shadow-rgba']);
 
 gulp.task('build:web:scss', () =>
   gulp

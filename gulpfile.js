@@ -1,5 +1,8 @@
 const gulp = require('gulp');
 const del = require('del');
+const theo = require('theo');
+
+require('./build/utils/registerShadowTransform')(theo);
 
 const doc = require('./build/doc');
 const web = require('./build/web');
